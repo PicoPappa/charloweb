@@ -1,0 +1,306 @@
+import React, {useRef,useState,useEffect,useCallback} from "react";
+import styled from "styled-components";
+import { useSpring, animated } from "react-spring";
+import { MdClose } from "react-icons/md";
+import { ButtonCenter } from "../Button/ButtonElements";
+import { easeCubic, easePolyOut } from "d3-ease";
+import emailjs,{init} from 'emailjs-com';
+
+ export const FixedWrapper = styled.div`
+  position:fixed;
+  width:100vw;
+
+  justify-self:center;
+  justify-content:center;
+  align-items: center;
+  z-index:4;
+  left:0;
+  top:0;
+` 
+
+const Background = styled.div`
+
+  position:relative;
+  width: 100vw;
+  height:100vh;
+  background: rgba(51, 51, 51, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index:5;
+`;
+
+const ModalWrapper = styled.div`
+  width: 800px;
+  height: 600px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+    z-index:6;
+
+    @media screen and (max-width: 820px) {
+  width:80vw;
+  height:fit-content;
+  display:flex;
+  flex-direction:column;
+  
+  }
+`;
+
+const ModalImg = styled.img`
+  width: 100%;
+  height: 600px;
+  border-radius: 10px 0 0 10px;
+  background: #000;
+  @media screen and (max-width: 820px) {
+  display:none;
+  }
+
+`;
+
+const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.8;
+  color: #141414;
+`
+
+const CloseModalButton = styled(MdClose)`
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  z-index: 10;
+    @media screen and (max-width: 820px) {
+    top: 10px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    }
+`;
+
+export const ContactForm = styled.form`
+  width: 100%;
+  justify-content: left;
+  align-items: left;
+  display:flex;
+  flex-direction: column;
+  padding:40px;
+  `
+
+  export const ContactLabel = styled.label`
+  margin-top: 30px;
+  margin-left:0px;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  font-size: 12px;
+  line-height:16px;
+  font-weight: 600;
+  color: #d2d2d4;
+  `
+  export const ContactInput= styled.input`
+  padding-left:4%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:transparent;
+  border:2px solid #ededed;
+  border-radius:4px ;
+  font-size: 14px;
+  line-height:30px;
+  font-weight: 600;
+  color: #acaeb0;
+  `
+  export const MessageInput= styled.textarea`
+  padding:4%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:transparent;
+  border:2px solid #ededed;
+  border-radius:4px ;
+  font-size: 14px;
+  line-height:22px;
+  font-weight: 600;
+  color: #acaeb0;
+  margin-bottom:26px;
+      @media screen and (max-width: 820px) {
+       margin-bottom:24px;
+      }
+  
+  `
+
+const TitleForm = styled.h2`
+  color:#4b4b4d;
+  font-size:24px;
+  width:250px;
+  justify-content: center;
+  align-items: center;
+    @media screen and (max-width: 820px) {
+    font-size:20px;
+    justify-self:center;
+    align-self:center;
+    width:100%;
+    }
+  
+  `
+
+  export const ContactInterest = styled.select`
+  padding-left:4%;
+  padding-top:9px;
+  padding-bottom:9px;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  font-size: 12px;
+  line-height:30px;
+  font-weight: 600;
+  color: #acaeb0;
+  border:2px solid #ededed;
+  border-radius:4px ;
+  `
+
+  export const InterestOption = styled.option`
+  margin-top: 30px;
+  padding-left:4%;
+  padding-top:9px;
+  padding-bottom:9px;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  font-size: 12px;
+  line-height:30px;
+  font-weight: 600;
+  color: #d2d2d4;
+  border:2px solid #ededed;
+  border-radius:4px ;
+  `
+
+export function ContactFormFunction ()
+{
+
+  function sendEmail ( e )
+  {
+    console.log( "mandando mail" );
+    e.preventDefault();
+
+    emailjs.sendForm( 'service_n84kzu1', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
+      .then( ( result ) =>
+      {
+        console.log( result.text );
+      }, ( error ) =>
+      {
+        console.log( error.text );
+      } );
+    e.target.reset();
+  }
+  return (
+    <>
+    <ContactForm onSubmit={ sendEmail }>
+                        <TitleForm>Begin your spanish journey today!</TitleForm>
+                        <ContactLabel>NAME</ContactLabel>
+                        <ContactInput type="text" name="user_name" />
+                        <ContactLabel>EMAIL</ContactLabel>
+                        <ContactInput type="email" name="user_email" />
+                        <ContactLabel>INTEREST</ContactLabel>
+                        <ContactInterest name="interest" id="c-form-profession">
+                          <option value="">SELECT YOUR INTEREST</option>
+                           <InterestOption value="Free one-on-one class">One-on-One Free Class</InterestOption>
+                           <InterestOption value="Two-Student class">Two Student Class</InterestOption>
+                          <InterestOption value="Chat Session">Chat Session</InterestOption>
+                          <InterestOption value="Document Revision">Document Revission</InterestOption>
+                          <InterestOption value="Other">Other</InterestOption>
+        </ContactInterest>
+        <ContactLabel>COMMENTS (OPTIONAL)</ContactLabel>
+                        <MessageInput rows="2" type="comments" name="comments" />
+
+  
+                        <ButtonCenter name="submit" type="submit" value="Submit">Send</ButtonCenter>
+
+                        </ContactForm>
+    </>
+  )
+    
+}
+
+export const Modal = ({ showModal, setShowModal }) => {
+ 
+  const modalRef = useRef();
+  
+
+  const animation = useSpring({
+    config: {
+      duration: 1000,
+      easing: easePolyOut
+    },
+    opacity: showModal ? 1 : 0,
+    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
+  });
+
+  const closeModal = e => {
+    if (modalRef.current === e.target) {
+        setShowModal( false );
+    }
+  };
+
+     const keyPress = useCallback(
+    e => {
+      if (e.key === 'Escape' && showModal) {
+        setShowModal(false);
+        console.log('I pressed');
+      }
+    },
+    [setShowModal, showModal]
+  );
+
+  useEffect(
+    () => {
+      document.addEventListener('keydown', keyPress);
+      return () => document.removeEventListener('keydown', keyPress);
+    },
+    [keyPress]
+  );
+    
+    return (
+        <>
+        { showModal ? (
+
+               <FixedWrapper>
+                    <Background onClick={closeModal} ref={modalRef}>
+                    <animated.div style={animation}>
+                    <ModalWrapper showModal={ showModal }>
+                        <ModalImg src={ require( "./modal.jpg" ) } alt="camera" />
+                    <ModalContent>
+                      <ContactFormFunction></ContactFormFunction>
+                      
+                        </ModalContent>
+                        <CloseModalButton
+                            aria-label="Close modal"
+                            onClick={ () => setShowModal( prev => !prev ) } />
+                            </ModalWrapper>
+                            </animated.div>
+                    </Background>
+            </FixedWrapper>
+   
+            ) : null }
+        </>
+    );
+};
+
