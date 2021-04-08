@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react"
 import { ButtonHolderStaff } from "../Button/ButtonElements"
-import Image from "../image"
+
 import Img from "gatsby-image"
 import { StaffFluidContainer } from "../Features/FeatureElements"
 import { StaffGod,StaffContainer, DataSubtitleStaff, DataTitleStaff, DataWrapStaff, StaffInfo, StaffInfoWidth,ThreeColumnsStaff } from "./StaffElements"

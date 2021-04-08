@@ -1,7 +1,6 @@
 import React, {useRef, useEffect} from "react"
 import { Button, ButtonHolder } from "../Button/ButtonElements"
 import { AiFillStar} from "react-icons/ai"
-import Image from "../image"
 import Img from "gatsby-image"
 import { TwoColumnsWrapJourney, ThreeColumnsWrap, FeaturesContainer, FeaturesGrid, Feature, FeatureIcon, FeaturesGod, Icon1,ImageContainer2, JourneyFluidContainer, CircleJourney, CircleJourneyFluidContainer, FeaturesFluidContainer, FeaturesCircleContainer } from "../Features/FeatureElements"
 import { SectionGod, DataWrap, DataTitle, DataSubtitle } from "./JourneyElements";
