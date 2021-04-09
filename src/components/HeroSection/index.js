@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import { Button, ButtonHolder, ButtonMobile, ButtonHolderMobile } from "../Button/ButtonElements"
+import { ButtonHolderMobile } from "../Button/ButtonElements"
 import ModalButtonMobile from "../Button/ButtonMobile"
 import "./HeroSection.css"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { TiTick } from "react-icons/ti"
-import { GrFormClose } from "react-icons/gr"
+
 import "../Journey/journeyStyle.css"
-import { Circle, CircleFluidContainer, FluidContainer } from "../Features/FeatureElements"
+import {FluidContainer } from "../Features/FeatureElements"
 import backgroundVideo from "../../videos/video.mp4"
 
 const TickIcon = styled( TiTick )`

@@ -1,20 +1,23 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
-import { AiFillStar} from "react-icons/ai"
+
 
 export const StaffGod = styled.div`
   width: 100%;
   max-width: 900px;
   justify-content: center;
   align-items: center;
-  margin: 250px auto auto auto;
+  margin: 200px auto auto auto;
 /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   background: linear-gradient(135deg, rgba(25, 21, 35 ,1) 0%, rgba(44, 44, 89,1) 0%, rgba(89, 75, 145,1) 100%); */
   `
 
 export const StaffInfo = styled.div`
-margin-top:50px;
+
   width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  flex-direction:column;
 
   justify-content: center;
   align-items: center;
@@ -41,8 +44,10 @@ margin-top:50px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -80px;
+
   margin-left:auto;
+  align-self:center;
+  align-content:center;
   margin-right:auto;
 `
 

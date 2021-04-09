@@ -7,7 +7,7 @@ export const SectionGod = styled.div`
   max-width: 1000px;
   justify-content: center;
   align-items: center;
-  margin: 300px auto auto auto;
+  margin: 200px auto auto auto;
   @media screen and (max-width: 690px) {
   width:90%;
   }
@@ -18,7 +18,7 @@ export const SectionGod = styled.div`
   max-width: 1000px;
   justify-content: center;
   align-items: center;
-  margin: 250px auto auto auto;
+  margin: 200px auto auto auto;
   @media screen and (max-width: 690px) {
   width:90%;
   }

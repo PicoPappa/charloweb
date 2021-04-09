@@ -174,7 +174,7 @@ column-gap:16px;
 
 
 export const ButtonHolderMobile = styled.div`
-margin-top:80px;
+margin-top:36px;
 display:flex;
 color:#ADAECD;
 font-size:16px;

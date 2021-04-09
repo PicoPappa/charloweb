@@ -103,6 +103,7 @@ img {
   object-fit: cover;
   position: relative;
   top: 70px;
+  bottom: 0;
 }
 
 .imgc3 {

@@ -52,7 +52,7 @@ function StaffSection (){
       {
         duration:1,
         opacity: 1,
-        y: 0,
+        x: 0,
         scrollTrigger: {
           trigger: element.querySelector(".title"),
           start: "center 1100px",

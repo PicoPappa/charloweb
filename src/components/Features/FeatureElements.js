@@ -9,9 +9,6 @@ export const FeaturesGod = styled.div`
   align-items: center;
   margin: auto;
   padding-top:140px;
-    @media screen and (max-width:690px){
-    padding-top:240px;
-    }
 `
 
 export const ImageContainer = styled.div`
@@ -270,7 +267,7 @@ justify-self:center;
   }
 `
 export const StaffFluidContainer = styled.div`
-width:90%;
+width:70%;
 margin-top:16px;
 margin-right:auto;
 margin-left:auto;
@@ -298,7 +295,6 @@ export const FeaturesContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  margin-top: -80px;
 `
 
 
