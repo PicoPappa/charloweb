@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <head><meta name="google-site-verification" content="h7HBfMWFdBCibFs8KIOBN6m5885DUKtK_eJGLQXdGwk" /></head>
       <Navbar />
 
         <main>{children}</main>

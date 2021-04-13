@@ -60,7 +60,7 @@ const ModalImg = styled.div`
   height: 600px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background: #000;
+  background: white;
   @media screen and (max-width: 820px) {
   display:none;
   }
