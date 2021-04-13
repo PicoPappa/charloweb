@@ -179,10 +179,21 @@ height:160px;
 
 export const FluidContainer = styled.div`
 width:60%;
+height:auto !important;
   -webkit-filter: drop-shadow(0px 0px 10px rgba(29,28,53,0.4));
 
     transition: 0.8s all ease;
     margin-bottom:62px;
+    @media screen and (max-height: 760px) {
+    width:50%;
+    margin-bottom:50px;
+    }
+
+    @media screen and (max-height: 500px) {
+    width:40%;
+    margin-bottom:20px;
+    }
+
     
 `
 
@@ -204,11 +215,12 @@ height:340px;
 align-self:center;
 justify-content:center;
 align-items:center;
-margin:auto;
-margin-top:60px;
+margin-left:auto;
+margin-right:auto;
+margin-top:110px;
 padding:20px;
 position:relative;
-bottom:-80px;
+
 border-radius:500px;
 transition: 0.8s all ease;
 background: linear-gradient(rgba(75,78,165,1) 0%, rgba(92, 134, 249,1) 0%, rgba(108, 48, 219,1) 100%);
@@ -273,16 +285,8 @@ margin-right:auto;
 margin-left:auto;
     transition: 0.8s all ease;
 
-@media screen and (max-width: 960px) {
-  }
-
-  @media screen and (max-width: 820px) {
-  }
-  
-  @media screen and (max-width: 780px) {
-  }
-
-  @media screen and (max-width: 740px) {
+@media screen and (max-width: 690px) {
+  width:90%;
   }
 
    /* @media screen and (max-width: 690px) {

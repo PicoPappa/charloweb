@@ -49,7 +49,7 @@
 
 .hero-container > ul {
   margin-top: 26px;
-  color: #adaecd;
+  color: #d6daff;
   font-size: 16px;
   line-height: 30px;
   list-style: none;
@@ -78,16 +78,14 @@
   }
 }
 
-@media screen and (max-width: 820px) {
-  .hero-wrapper {
-  }
-}
-
 @media screen and (max-width: 690px) {
   .hero-wrapper {
     column-gap: 0px;
     height: 80vh;
     justify-content: center;
+  }
+  .hero-container {
+    margin-top: 0;
   }
   .hero-container > h3,
   h2 {

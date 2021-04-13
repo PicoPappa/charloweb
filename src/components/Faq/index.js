@@ -91,7 +91,7 @@ const FaqAccordion = () =>
                         <>
                                 
                             <Wrap onClick={ () => toggle( index ) } key={ index }>
-                                <QuestionText>{ item.q }</QuestionText>
+                                <p><b>{ item.q }</b></p>
                              <span>{clicked===index?<FiMinus/>:<FiPlus/>}</span>
                             </Wrap>
                             { clicked === index ? (

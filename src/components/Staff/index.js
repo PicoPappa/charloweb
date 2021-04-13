@@ -3,7 +3,7 @@ import { ButtonHolderStaff } from "../Button/ButtonElements"
 
 import Img from "gatsby-image"
 import { StaffFluidContainer } from "../Features/FeatureElements"
-import { StaffGod,StaffContainer, DataSubtitleStaff, DataTitleStaff, DataWrapStaff, StaffInfo, StaffInfoWidth,ThreeColumnsStaff } from "./StaffElements"
+import { StaffGod,StaffContainer, DataSubtitleStaff, DataTitleStaff, DataWrapStaff, StaffInfo, StaffInfoWidth,ThreeColumnsStaff, CertifyIcon, NativeIcon, SpecializedIcon } from "./StaffElements"
 import ModalButton from "../Button/Button"
 import { useStaticQuery, graphql } from "gatsby"
 import { gsap, ScrollTrigger } from "gsap/all";
@@ -96,17 +96,19 @@ function StaffSection (){
                         
                     <ThreeColumnsStaff>
                         <DataWrapStaff>
-                            <DataTitleStaff>+5500</DataTitleStaff>
-                            <DataSubtitleStaff>Students</DataSubtitleStaff>
-                        </DataWrapStaff>
+                            <CertifyIcon/>
+                            <DataSubtitleStaff>Certified</DataSubtitleStaff>
+              </DataWrapStaff>
+               
                         <DataWrapStaff>
-                            <DataTitleStaff>+5500</DataTitleStaff>
-                            <DataSubtitleStaff>Students</DataSubtitleStaff>
+                            <NativeIcon/>
+                            <DataSubtitleStaff>Native</DataSubtitleStaff>
+              </DataWrapStaff>
+              <DataWrapStaff>
+                            <SpecializedIcon/>
+                            <DataSubtitleStaff>Expert</DataSubtitleStaff>
                         </DataWrapStaff>
-                        <DataWrapStaff>
-                            <DataTitleStaff>+5500</DataTitleStaff>
-                            <DataSubtitleStaff>Students</DataSubtitleStaff>
-                        </DataWrapStaff>
+                       
                     </ThreeColumnsStaff>
                     <ButtonHolderStaff>
                      <ModalButton>Try 1-on-1 class free</ModalButton>

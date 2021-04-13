@@ -91,11 +91,11 @@ function FeaturesSection (){
             return (
               <FeaturesGod ref={ref}>
                 <a id="features">    
-                  <TwoColumnsWrapFeatures className="title">
+                  <TwoColumnsWrapFeatures>
 
                     
-                    <FeaturesFluidContainer >
-                      <FeaturesCircleContainer>
+                    <FeaturesFluidContainer  >
+                      <FeaturesCircleContainer className="pic">
                         <Img fluid={ data.two.childImageSharp.fluid } alt="" />
                         </FeaturesCircleContainer>
                     </FeaturesFluidContainer>
@@ -103,7 +103,7 @@ function FeaturesSection (){
 
 
                     <div>
-                    <FeaturesContainer  >
+                    <FeaturesContainer  className="title" >
                             <h6>FEATURES</h6>
                             <h3>What you will</h3>
                             <h2>get from us?</h2>

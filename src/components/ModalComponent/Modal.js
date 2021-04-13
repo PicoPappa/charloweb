@@ -4,7 +4,9 @@ import { useSpring, animated } from "react-spring";
 import { MdClose } from "react-icons/md";
 import { ButtonCenter } from "../Button/ButtonElements";
 import { easeCubic, easePolyOut } from "d3-ease";
-import emailjs,{init} from 'emailjs-com';
+import emailjs, { init } from 'emailjs-com';
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
  export const FixedWrapper = styled.div`
   position:fixed;
@@ -53,10 +55,11 @@ const ModalWrapper = styled.div`
   }
 `;
 
-const ModalImg = styled.img`
+const ModalImg = styled.div`
   width: 100%;
   height: 600px;
-  border-radius: 10px 0 0 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   background: #000;
   @media screen and (max-width: 820px) {
   display:none;
@@ -244,6 +247,19 @@ export const Modal = ({ showModal, setShowModal }) => {
  
   const modalRef = useRef();
   
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "modal.jpg" }) {
+        childImageSharp {
+          # Specify a fixed image and fragment.
+          # The default width is 400 pixels
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      }
+  `)
 
   const animation = useSpring({
     config: {
@@ -286,7 +302,9 @@ export const Modal = ({ showModal, setShowModal }) => {
                     <Background onClick={closeModal} ref={modalRef}>
                     <animated.div style={animation}>
                     <ModalWrapper showModal={ showModal }>
-                        <ModalImg src={ require( "./modal.jpg" ) } alt="camera" />
+                  <ModalImg>
+                      <Img fluid={ data.file.childImageSharp.fluid } alt="" />
+                    </ModalImg>
                     <ModalContent>
                       <ContactFormFunction></ContactFormFunction>
                       
