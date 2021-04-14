@@ -112,7 +112,6 @@ function StaffSection (){
                     </ThreeColumnsStaff>
                     <ButtonHolderStaff>
                      <ModalButton>Try 1-on-1 class free</ModalButton>
-                      <p>No credit card needed.</p>
                     </ButtonHolderStaff>
                     </StaffContainer>
                     

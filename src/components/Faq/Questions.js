@@ -5,7 +5,7 @@ export const Questions = [
     },
     {
         q: "How can I purchase a plan?",
-        a:"Click on 'Try 1-on-1 class free' or 'Enroll now' and contact us about your needs and interest. Then we'll email you the methods to start buying hours for the plan you choose."
+        a:"Click on 'Enroll now' and contact us about your needs and interest. Then we'll email you the methods to start buying hours for the plan you choose."
     },
     
     {

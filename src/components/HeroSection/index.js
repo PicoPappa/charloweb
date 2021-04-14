@@ -75,7 +75,7 @@ export default function HeroSection() {
                        <ModalButtonMobile>
 
                        </ModalButtonMobile>
-                        <p>No credit card needed.</p>
+                        <p>Try 1-on-1 class free.</p>
                     </ButtonHolderMobile>
                </div>
             

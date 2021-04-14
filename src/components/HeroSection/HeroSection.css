@@ -34,7 +34,7 @@
 
 .videocontainer {
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   height: 100vh;
   left: 0;

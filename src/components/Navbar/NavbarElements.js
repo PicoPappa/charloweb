@@ -119,7 +119,7 @@ text-align:center;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    width:60%;
+    width:40%;
     height:100vh;
     right:0;
     position:fixed;

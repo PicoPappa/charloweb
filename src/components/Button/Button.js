@@ -19,7 +19,7 @@ function ModalButton ()
     <>
     < Modal showModal={ showModal } setShowModal={ setShowModal } />
 
-    < Button onClick = { openModal}> Try 1-on-1 class for free</Button>
+    < Button onClick = { openModal}> Enroll Now</Button>
 
     </>
   );

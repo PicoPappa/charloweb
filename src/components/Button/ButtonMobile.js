@@ -14,7 +14,7 @@ const openModal = () =>
 
   return (
     <> 
-    < ButtonMobile onClick = { openModal } > Try 1-on-1 class free</ButtonMobile>
+    < ButtonMobile onClick = { openModal } >Enroll Now</ButtonMobile>
     
     < Modal showModal={ showModal } setShowModal={ setShowModal } />
     </>

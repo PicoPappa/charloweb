@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Button = styled.button`
     transition: 0.8s all ease;
-  padding: 15px 30px;
+  padding: 15px 60px;
   border-radius: 40px;
   outline: none;
   border: none;
@@ -51,8 +51,8 @@ export const ButtonStaff = styled.button`
 
 export const ButtonMobile = styled.button`
     transition: 0.8s all ease;
-
-  padding: 15px 30px;
+  
+  padding: 15px 60px;
   border-radius: 40px;
   outline: none;
   border: none;
@@ -125,22 +125,21 @@ column-gap:16px;
 `
 
 export const ButtonHolderCenter = styled.div`
-margin-top:80px;
+margin-top:60px;
 display:flex;
 color:#ADAECD;
 font-size:16px;
 width:400px;
 align-items:center;
-column-gap:16px;
 margin-left:auto;
 margin-right:auto;
+justify-content:center;
 @media screen and (max-width: 960px) {
   flex-direction:column;
   align-items:center;
   justify-content:center;
   width:180px;
   text-align:center;
-  row-gap:10px;
   margin-left:auto;
   margin-right:auto;
 }
@@ -157,14 +156,13 @@ color:#ADAECD;
 font-size:16px;
 width:400px;
 align-items:center;
-column-gap:16px;
+justify-content:center;
 @media screen and (max-width: 960px) {
   flex-direction:column;
   align-items:center;
   justify-content:center;
   width:180px;
   text-align:center;
-  row-gap:10px;
 }
 
 @media screen and (max-width: 690px) {
@@ -180,7 +178,9 @@ color:#ADAECD;
 font-size:16px;
 width:400px;
 align-items:center;
-column-gap:16px;
+flex-direction:column;
+row-gap:16px;
+justify-content:center;
 @media screen and (max-width: 960px) {
   flex-direction:column;
   align-items:center;

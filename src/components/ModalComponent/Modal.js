@@ -154,7 +154,7 @@ const TitleForm = styled.h2`
   width:250px;
   justify-content: center;
   align-items: center;
-    @media screen and (max-width: 820px) {
+      @media screen and (max-width: 820px) {
     font-size:20px;
     justify-self:center;
     align-self:center;
@@ -196,8 +196,29 @@ const TitleForm = styled.h2`
   border-radius:4px ;
   `
 
+
+
+export const EmailSent = styled.div`
+width:80%;
+max-width:300px;
+justify-content:center;
+background:white;
+align-items:center;
+display:none;
+`
+
+export const SentText = styled.p`
+font-size:16px;
+color:#141414;
+`
+
 export function ContactFormFunction ()
 {
+  function showMessage() {
+    document.getElementById( "titlesent" ).innerHTML = "Your message was sent! Soon we will contact you."
+    document.getElementById( "titlesent" ).style.fontSize = "20px";
+     document.getElementById( "titlesent" ).style.color = "#6775ff";
+  }
 
   function sendEmail ( e )
   {
@@ -217,11 +238,12 @@ export function ContactFormFunction ()
   return (
     <>
     <ContactForm onSubmit={ sendEmail }>
-                        <TitleForm>Begin your spanish journey today!</TitleForm>
+      
+                        <TitleForm id="titlesent">Begin your spanish journey today!</TitleForm>
                         <ContactLabel>NAME</ContactLabel>
                         <ContactInput type="text" name="user_name" />
                         <ContactLabel>EMAIL</ContactLabel>
-                        <ContactInput type="email" name="user_email" />
+                        <ContactInput type="email" name="user_email" id="email_input"/>
                         <ContactLabel>INTEREST</ContactLabel>
                         <ContactInterest name="interest" id="c-form-profession">
                           <option value="">SELECT YOUR INTEREST</option>
@@ -234,10 +256,12 @@ export function ContactFormFunction ()
         <ContactLabel>COMMENTS (OPTIONAL)</ContactLabel>
                         <MessageInput rows="2" type="comments" name="comments" />
 
-  
-                        <ButtonCenter name="submit" type="submit" value="Submit">Send</ButtonCenter>
+        
+        <ButtonCenter name="submit" type="submit" value="Submit" onClick={ showMessage }>Send</ButtonCenter>
 
-                        </ContactForm>
+      </ContactForm>
+
+      
     </>
   )
     
