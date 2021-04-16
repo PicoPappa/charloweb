@@ -20,9 +20,10 @@
 
 .hero-container > h1 {
   color: #fff;
-  font-size: 61px;
-  font-weight: 600px;
+  font-size: 45px;
+  font-weight: 500;
   margin-top: 0px;
+  text-align: center;
 }
 
 .hero-container > p {
@@ -65,11 +66,6 @@
 
 .hero-container > .pink-button {
   margin-top: 32px;
-}
-
-.final-cta {
-  background: url("../../images/backgroundcta.jpg") center center/ cover
-    no-repeat;
 }
 
 @media screen and (max-width: 960px) {

@@ -327,7 +327,7 @@ export const Modal = ({ showModal, setShowModal }) => {
                     <animated.div style={animation}>
                     <ModalWrapper showModal={ showModal }>
                   <ModalImg>
-                      <Img fluid={ data.file.childImageSharp.fluid } alt="" />
+                      <Img fluid={ data.file.childImageSharp.fluid } alt="two friends having fun at their home" />
                     </ModalImg>
                     <ModalContent>
                       <ContactFormFunction></ContactFormFunction>

@@ -96,7 +96,7 @@ function FeaturesSection (){
                     
                     <FeaturesFluidContainer  >
                       <FeaturesCircleContainer className="pic">
-                        <Img fluid={ data.two.childImageSharp.fluid } alt="" />
+                        <Img fluid={ data.two.childImageSharp.fluid } alt="headset" />
                         </FeaturesCircleContainer>
                     </FeaturesFluidContainer>
                     

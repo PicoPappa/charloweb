@@ -105,7 +105,7 @@ export function PricingCarousel ()
                     </div>
                 </div>
                 <div class="imgc" >
-                  <Img fluid={ data.one.childImageSharp.fluid } alt="" />
+                  <Img fluid={ data.one.childImageSharp.fluid } alt="Girl drinking tea with thumb up" />
                 </div>
                 </TwoColumnsWrapPricing>
             </div>
@@ -126,7 +126,7 @@ export function PricingCarousel ()
                     </div>
                   </div>
                 <div class="imgc2" >
-                  <Img fluid={ data.two.childImageSharp.fluid } alt="" />
+                  <Img fluid={ data.two.childImageSharp.fluid } alt="Two students smiling" />
                 </div>
                 </TwoColumnsWrapPricing>
             </div>
@@ -148,7 +148,7 @@ export function PricingCarousel ()
                     </div>
                 </div>
                 <div class="imgc3" >
-                  <Img fluid={ data.three.childImageSharp.fluid } alt="" />
+                  <Img fluid={ data.three.childImageSharp.fluid } alt="headset" />
                 </div>
                 </TwoColumnsWrapPricing>
             </div>

@@ -3,9 +3,26 @@ module.exports = {
     title: `Charlo - Escuela de Español`,
     description: `Study spanish with native teachers on private live classes focused on your needs. `,
     author: `Charlo`,
+    siteUrl: `https://www.charlo.es`,
+    meta: {
+        charset: 'utf-8',
+        name: {
+          keywords: 'spanish school,school,spanish,online,courses,native teachers,budget,learn,class,lessons'
+        }
+      }
   },
+  
   plugins: [
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.charlo.es',
+        sitemap: 'https://www.charlo.es/sitemap.xml',
+        policy: [ { userAgent: '*', allow: '/' } ],
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,12 +50,13 @@ module.exports = {
 
       },
     },
+    
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Charlo-school`,
+        short_name: `Charlo`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

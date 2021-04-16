@@ -87,7 +87,7 @@ function StaffSection (){
                         <h2>the best #1</h2>
                         
                         <StaffFluidContainer >
-                        <Img fluid={ data.file.childImageSharp.fluid } alt="" />
+                        <Img fluid={ data.file.childImageSharp.fluid } alt="group of teachers on a classroom" />
                 </StaffFluidContainer>
                 <StaffInfoWidth>
                         <h5>We’re a modern school made for modern students with <b>30+ years of experience</b>. Our teachers are <b>native speakers</b> fully prepared to help you discover a new world in an effective and comfortable way. We’ll assign you a <b>specialized teacher</b> that fits your needs and helps you reach your goals. Every teacher is <b>fully certified and prepared</b> to teach you.</h5>

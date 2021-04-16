@@ -9,7 +9,7 @@ import { TiTick } from "react-icons/ti"
 
 import "../Journey/journeyStyle.css"
 import {FluidContainer } from "../Features/FeatureElements"
-import backgroundVideo from "../../videos/video.mp4"
+import backgroundVideo from "../../videos/video.webm"
 
 const TickIcon = styled( TiTick )`
 font-size:20px;
@@ -51,7 +51,7 @@ export default function HeroSection() {
     <div className="hero-wrapper">
       <div className="videocontainer">
       <video autoPlay loop muted id="video">
-            <source src={backgroundVideo} type="video/mp4"/>
+            <source src={backgroundVideo} type="video/webm"/>
         </video>
         </div>
       <div className="hero-container">
@@ -61,10 +61,12 @@ export default function HeroSection() {
           </CircleFluidContainer>
         </Circle> */}
         <FluidContainer>
-               <Img fluid={ data.file.childImageSharp.fluid } alt="" />
+               <Img fluid={ data.file.childImageSharp.fluid } alt="logo" />
                </FluidContainer>
-                      <h3>Learn today's</h3>
-                      <h2>spanish with us</h2>
+                        <h1>Learn today's
+                        <br/><b>spanish with us</b>
+                        </h1>
+
 
                     <ul>
                         <li><TickIcon/>100% personalized live classes.</li>
