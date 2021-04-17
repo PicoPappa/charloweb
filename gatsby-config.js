@@ -21,7 +21,7 @@ module.exports = {
         host: 'https://www.charlo.es',
         sitemap: 'https://www.charlo.es/sitemap.xml',
         policy: [ { userAgent: '*', allow: '/' } ],
-      }
+      },
     },
     `gatsby-plugin-react-helmet`,
     {
@@ -62,6 +62,25 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/charlo-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-4Q1NJTXPML",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 0,
+
+        // Defers execution of google analytics script after page load
+        defer: false,
+
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
