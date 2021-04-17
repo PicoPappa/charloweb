@@ -8,6 +8,7 @@ import emailjs, { init } from 'emailjs-com';
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
+
  export const FixedWrapper = styled.div`
   position:fixed;
   width:100vw;
@@ -217,7 +218,9 @@ export function ContactFormFunction ()
   function showMessage() {
     document.getElementById( "titlesent" ).innerHTML = "Your message was sent! Soon we will contact you."
     document.getElementById( "titlesent" ).style.fontSize = "20px";
-     document.getElementById( "titlesent" ).style.color = "#6775ff";
+    document.getElementById( "titlesent" ).style.color = "#6775ff";
+    window.gtag( "event", "click", { ...data } );
+
   }
 
   function sendEmail ( e )
