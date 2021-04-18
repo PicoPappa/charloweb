@@ -216,12 +216,9 @@ color:#141414;
 export function ContactFormFunction ()
 {
   function showMessage() {
-    document.getElementById( "titlesent" ).innerHTML = "Thanks! Soon we will contact you."
+    document.getElementById( "titlesent" ).innerHTML = "Obrigado! Em breve entraremos em contato."
     document.getElementById( "titlesent" ).style.fontSize = "20px";
     document.getElementById( "titlesent" ).style.color = "#6775ff";
-    window.gtag( "event", "Form_Submit", {
-    'event_category': 'saliente',
-    'transport_type': 'beacon'} );
 
   }
 
