@@ -2,11 +2,12 @@ import React,{useState} from "react";
 import { Button } from "./ButtonElements";
 import { Modal } from "../ModalComponent/Modal"
 import "./ButtonStyle.css"
+import { ModalBr } from "../ModalComponent/ModalBr";
 
 
 
 
-function ModalButton ()
+function ModalButtonBr ()
 {
   const [ showModal, setShowModal ] = useState( false );
 
@@ -17,12 +18,12 @@ function ModalButton ()
 
   return (
     <>
-    < Modal showModal={ showModal } setShowModal={ setShowModal } />
+    < ModalBr showModal={ showModal } setShowModal={ setShowModal } />
 
-    < Button onClick = { openModal}>Enroll</Button>
+    < Button onClick = { openModal}>Inscreva-se</Button>
 
     </>
   );
 
 }
-export default ModalButton;
+export default ModalButtonBr;

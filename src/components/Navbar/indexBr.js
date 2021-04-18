@@ -4,7 +4,7 @@ import { IconContext } from "react-icons/lib"
 import JourneySection from "../Journey/index"
 import { MenuIcon, MobileIcon, Nav, NavbarContainer, NavIcon, NavLogo, NavMenu, NavItem, NavLinks, DarkBackground } from "./NavbarElements"
 
-const NavbarBr = () =>{
+const Navbar = () =>{
 const [ click, setClick ] = useState( false )
     const [ scroll, setScroll ] = useState( false )
     const handleClick=()=>setClick(!click)
@@ -44,16 +44,16 @@ const [ click, setClick ] = useState( false )
                             </MobileIcon>
                             <NavMenu onClick={ handleClick } click={ click }>
                                 <NavItem>
-                                    <NavLinks href="#features">Características</NavLinks>
+                                    <NavLinks href="#features">Features</NavLinks>
                                 </NavItem>
                                 {/* <NavItem>
                                     <NavLinks href="#journey">Experience</NavLinks>
                                 </NavItem> */}
                                 <NavItem>
-                                    <NavLinks href="#pricing">Preços</NavLinks>
+                                    <NavLinks href="#pricing">Pricing</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks href="#about-us">Sobre nós</NavLinks>
+                                    <NavLinks href="#about-us">About us</NavLinks>
                             </NavItem>
                             
                             </NavMenu>
@@ -66,4 +66,4 @@ const [ click, setClick ] = useState( false )
     )
 }
 
-export default NavbarBr
+export default Navbar

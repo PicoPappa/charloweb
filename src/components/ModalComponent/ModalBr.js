@@ -244,25 +244,24 @@ export function ContactFormFunction ()
     <>
     <ContactForm onSubmit={ sendEmail }>
       
-                        <TitleForm id="titlesent">Begin your spanish journey today!</TitleForm>
-                        <ContactLabel>NAME</ContactLabel>
+                        <TitleForm id="titlesent">Comece sua jornada em espanhol hoje!</TitleForm>
+                        <ContactLabel>NOME</ContactLabel>
                         <ContactInput type="text" name="user_name" />
                         <ContactLabel>EMAIL</ContactLabel>
                         <ContactInput type="email" name="user_email" id="email_input"/>
-                        <ContactLabel>INTEREST</ContactLabel>
+                        <ContactLabel>INTERESSE</ContactLabel>
                         <ContactInterest name="interest" id="c-form-profession">
-                          <option value="">SELECT YOUR INTEREST</option>
-                           <InterestOption value="Free one-on-one class">One-on-One Free Class</InterestOption>
-                           <InterestOption value="Two-Student class">Two Student Class</InterestOption>
-                          <InterestOption value="Chat Session">Chat Session</InterestOption>
-                          <InterestOption value="Document Revision">Document Revission</InterestOption>
-                          <InterestOption value="Other">Other</InterestOption>
+                          <option value="">SELECIONE SEU INTERESSE</option>
+                           <InterestOption value="Free one-on-one class">Aula Privada</InterestOption>
+                           <InterestOption value="Two-Student class">Aula de Dois Alunos</InterestOption>
+                          <InterestOption value="Chat Session">Aula de Chat</InterestOption>
+                          <InterestOption value="Other">Outro</InterestOption>
         </ContactInterest>
-        <ContactLabel>COMMENTS (OPTIONAL)</ContactLabel>
+        <ContactLabel>COMENTÁRIOS (OPCIONAL)</ContactLabel>
                         <MessageInput rows="2" type="comments" name="comments" />
 
         
-        <ButtonCenter name="submit" type="submit" value="Submit" onClick={ showMessage }>Send</ButtonCenter>
+        <ButtonCenter name="submit" type="submit" value="Submit" onClick={ showMessage }>ENVIAR</ButtonCenter>
 
       </ContactForm>
 
@@ -272,7 +271,7 @@ export function ContactFormFunction ()
     
 }
 
-export const Modal = ({ showModal, setShowModal }) => {
+export const ModalBr = ({ showModal, setShowModal }) => {
  
   const modalRef = useRef();
   

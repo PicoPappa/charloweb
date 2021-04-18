@@ -1,11 +1,11 @@
-export const Questions = [
+export const QuestionsBr = [
     {
         q: "Quando posso começar?",
         a: "Você pode começar quando quiser!"
     },
     {
         q: "Como posso adquirir um plano?",
-        a: "Clique em 'Inscreva-se agora' e entre em contato conosco sobre suas necessidades e interesses. Em seguida, enviaremos um e-mail com os métodos para começar a comprar horas para o plano que você escolher."
+        a: "Clique em 'Inscreva-se' e entre em contato conosco sobre suas necessidades e interesses. Em seguida, enviaremos um e-mail com os métodos para começar a comprar horas para o plano que você escolher."
     },
     
     {
