@@ -20,7 +20,7 @@ function ModalButtonBr ()
     <>
     < ModalBr showModal={ showModal } setShowModal={ setShowModal } />
 
-    < Button onClick = { openModal}>Inscreva-se</Button>
+    < Button  href="#pricing">RESERVE SUA AULA GRÁTIS</Button>
 
     </>
   );

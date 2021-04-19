@@ -117,7 +117,7 @@ function FeaturesSectionBr (){
                                 <Feature>
                                     <FeatureIcon><Icon2/></FeatureIcon>
                                         <h4>Aulas Adaptativas</h4>
-                                        <FeatureDescription>Depois de uma entrevista, criamos um programa só para você.</FeatureDescription>
+                                        <FeatureDescription>Depois de uma aula gratuita, criamos um programa só para você.</FeatureDescription>
                         </Feature>
                         
                         <Feature>

@@ -3,21 +3,20 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HeroSection from "../components/HeroSection"
-import FeaturesSection from "../components/Features"
-import JourneySection from "../components/Journey"
-import PricingSection from "../components/Pricing"
-import StaffSection from "../components/Staff"
+import HeroSectionBr from "../components/HeroSection/indexBr"
+import FeaturesSectionBr from "../components/Features/indexBr"
+import StaffSectionBr from "../components/Staff/indexBr"
+import PricingSectionBr from "../components/Pricing/indexBr"
 import FaqAccordion from "../components/Faq"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <HeroSection />
-    <FeaturesSection />
-    <StaffSection />
+    <HeroSectionBr />
+    <FeaturesSectionBr />
+    <StaffSectionBr />
     {/* <JourneySection /> */}
-    <PricingSection />
+    <PricingSectionBr />
     
     <FaqAccordion />
   </Layout>

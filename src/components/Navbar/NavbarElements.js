@@ -119,7 +119,7 @@ text-align:center;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    width:40%;
+    width:50%;
     height:100vh;
     right:0;
     position:fixed;
@@ -129,7 +129,7 @@ text-align:center;
     transition:all 0.8s ease;
     background: rgb(75,78,165);
     box-shadow: -10px 0 10px rgba(0,0,0,0.4);
-    background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(30,29,46,1) 100%);
+    background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(59, 62, 132,1) 100%);
 }
 `
 

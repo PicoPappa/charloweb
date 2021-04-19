@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Charlo - Escuela de Español`,
-    description: `Study spanish with native teachers on private live classes focused on your needs. `,
+    title: `Charlo, Espanhol Online`,
+    description: `Estude espanhol online com professores nativos da argentina. `,
     author: `Charlo`,
     siteUrl: `https://www.charlo.es`,
     meta: {
         charset: 'utf-8',
         name: {
-          keywords: 'spanish school,school,spanish,online,courses,native teachers,budget,learn,class,lessons'
+          keywords: 'espanhol,online,argentinos,profesores,best,aula de graça, aula grátis,brasileiros,brazil,argentina,curso, aula'
         }
       }
   },
@@ -82,7 +82,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Charlo-school`,
+        name: `Charlo-espanhol-online`,
         short_name: `Charlo`,
         start_url: `/`,
         background_color: `#663399`,

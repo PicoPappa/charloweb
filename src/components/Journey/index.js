@@ -7,7 +7,7 @@ import { SectionGod, DataWrap, DataTitle, DataSubtitle } from "./JourneyElements
 import { gsap, ScrollTrigger } from "gsap/all";
 import { useStaticQuery, graphql } from "gatsby"
 import ModalButton from "../Button/Button"
-import backgroundVideo from "../../videos/video.mp4"
+import backgroundVideo from "../../videos/video.webm"
 import styled from "styled-components"
 import "./journeyStyle.css"
 

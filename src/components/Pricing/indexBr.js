@@ -5,7 +5,7 @@ import { AiFillStar} from "react-icons/ai"
 import Img from "gatsby-image"
 import { TwoColumnsWrap, ThreeColumnsWrap, FeaturesContainer, FeaturesGrid, Feature, FeatureIcon, FeaturesGod, Icon1 } from "../Features/FeatureElements"
 import { SectionPricingGod, DataWrap, DataTitle, DataSubtitle } from "../Journey/JourneyElements"
-import { PlanContainer, PricingContainer, TwoColumnsPrice, ColumnClassLeft, ColumnClassRight } from "./PricingElements"
+import { PlanContainer, PricingContainer, TwoColumnsPrice, ColumnClassLeft, ColumnClassRight, ClassFtContainer, ClassFt, GradientOffer, GradientTittle, FtTitle,FtDescription, WrapperClassFt, GradientLine } from "./PricingElements"
 import { PricingCarouselBr } from "./PriceCarouselBr"
 import { gsap, ScrollTrigger } from "gsap/all";
 import ModalButton from "../Button/Button"
@@ -71,23 +71,78 @@ gsap.registerPlugin(ScrollTrigger);
                 
                     <PricingContainer className="text" >
                         
-                        <h6>PREÇOS</h6>
-                        <h3>Escolha o</h3>
-                        <h2>seu curso</h2>
-            <h5> Descubra os melhores cursos online <b> para o seu tempo e orçamento </b>.
-             Explore um mundo diferente enquanto desfruta de aulas 100% ao vivo com um
-               <b> professor nativo da Argentina </b>. Acreditamos fortemente que grandes grupos sacrificam a qualidade, por isso só permitimos
-                         grupos com no máximo dois alunos para que os professores <b> prestem atenção total em você </b>. Recomendamos que você primeiro faça uma <b>aula gratuita</b> para ver se gosta sem gastar dinhero. </h5>
-                <PricingCarouselBr className="plans"/>     
-                
+            {/* <GradientOffer>OFERTA</GradientOffer> */}
+
+                        <h3>Faça sua</h3>
+                        <GradientTittle>aula de graça!</GradientTittle>
+            <h5> Escolher um curso que você goste e encontrar o melhor programa para você é uma tarefa importante. É por isso que acreditamos que é essencial que você primeiro faça uma aula gratuita sem compromisso de compra para que possamos nos conhecer.</h5>
+            {/* <h6>RECURSOS DE AULA</h6> */}
+            
+            <WrapperClassFt>
+            <GradientLine></GradientLine>
+            <ClassFtContainer>
+              <ClassFt>
+                <FtTitle>
+                  Modalidade
+                </FtTitle>
+                <FtDescription>
+                  online
+                </FtDescription>
+              </ClassFt>
+
+              <ClassFt>
+                <FtTitle>
+                  Duração
+                </FtTitle>
+                <FtDescription>
+                  45 mins
+                </FtDescription>
+              </ClassFt>
+
+              <ClassFt>
+                <FtTitle>
+                  Plataforma
+                </FtTitle>
+                <FtDescription>
+                  Zoom
+                </FtDescription>
+              </ClassFt>
+
+              <ClassFt>
+                <FtTitle>
+                  Requisitos
+                </FtTitle>
+                <FtDescription>
+                  nenhum
+                </FtDescription>
+              </ClassFt>
+
+              <ClassFt>
+                <FtTitle>
+                  Preço
+                </FtTitle>
+                <FtDescription>
+                  grátis
+                </FtDescription>
+              </ClassFt>
+
+
+
+
+            </ClassFtContainer>
+                    
+                </WrapperClassFt>
                         
-            </PricingContainer>
-            <ButtonHolderCenter>
+          </PricingContainer>
+          
+           
+            {/* <ButtonHolderCenter>
                             
                             <ModalButtonBr>Try 1-on-1 class free</ModalButtonBr>
-                         </ButtonHolderCenter>
+                         </ButtonHolderCenter> */}
                     
-                    </a>
+        </a>
+        <PricingCarouselBr className="plans"/>
             
         </SectionPricingGod>
             

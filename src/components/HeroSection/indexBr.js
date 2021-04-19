@@ -10,7 +10,7 @@ import { TiTick } from "react-icons/ti"
 import "../Journey/journeyStyle.css"
 import {FluidContainer } from "../Features/FeatureElements"
 import backgroundVideo from "../../videos/video.webm"
-import ModalButtonMobileBr from "../Button/ButtonMobile copy"
+import ModalButtonMobileBr from "../Button/ButtonMobileBr"
 
 const TickIcon = styled( TiTick )`
 font-size:20px;
@@ -77,7 +77,7 @@ export default function HeroSection() {
                        <ModalButtonMobileBr>
 
                        </ModalButtonMobileBr>
-                        <p>Tente um curso grátis.</p>
+                        <p> Não precisa de cartão de crédito.</p>
                     </ButtonHolderMobile>
                </div>
             

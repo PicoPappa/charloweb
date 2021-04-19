@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Button = styled.button`
+export const Button = styled.a`
     transition: 0.8s all ease;
   padding: 15px 60px;
   border-radius: 40px;
@@ -8,14 +8,15 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(223,79,180,1) 0%, rgba(123,67,255,1) 100%);
+  background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%);
   color: white;
   font-weight: 700;
   justify-content:center;
   align-items:center;
+  
   &:hover{
         /* background: linear-gradient(90deg, rgba(123,67,255,1)  0%, rgba(223,79,180,1) 100%); */
-        box-shadow: 0px 5px 10px rgba(0,0,0,1);
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
         transform: translatey(-10%);
         transition:all 0.4s ease;
     }
@@ -32,14 +33,14 @@ export const ButtonStaff = styled.button`
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(223,79,180,1) 0%, rgba(123,67,255,1) 100%);
+  background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%);
   color: white;
   font-weight: 700;
   justify-content:center;
   align-items:center;
   &:hover{
         /* background: linear-gradient(90deg, rgba(123,67,255,1)  0%, rgba(223,79,180,1) 100%); */
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
         transform: translatey(-10%);
         transition:all 0.4s ease;
     }
@@ -49,7 +50,7 @@ export const ButtonStaff = styled.button`
 `
 
 
-export const ButtonMobile = styled.button`
+export const ButtonMobile = styled.a`
     transition: 0.8s all ease;
   
   padding: 15px 60px;
@@ -58,14 +59,14 @@ export const ButtonMobile = styled.button`
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(223,79,180,1) 0%, rgba(123,67,255,1) 100%);
+  background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%);
   color: white;
   font-weight: 700;
   justify-content:center;
   align-items:center;
   &:hover{
         /* background: linear-gradient(90deg, rgba(123,67,255,1)  0%, rgba(223,79,180,1) 100%); */
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
         transform: translatey(-10%);
         transition:all 0.4s ease;
     }
@@ -84,10 +85,10 @@ export const ButtonCenter = styled.button`
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(223,79,180,1) 0%, rgba(123,67,255,1) 100%);
+  background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%);
   color: white;
   font-weight: 700;
-  margin-top:16px;
+  margin-top:46px;
    &:hover{
         /* background: linear-gradient(90deg, rgba(123,67,255,1)  0%, rgba(223,79,180,1) 100%); */
         box-shadow: 0px 5px 5px rgba(0,0,0,0.1);

@@ -329,6 +329,7 @@ align-items: left;
 @media screen and (max-width: 690px) {
 justify-content:center;
 align-items:center;
+margin:auto;
 width:200px;
 }
 `
