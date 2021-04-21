@@ -227,7 +227,7 @@ export function ContactFormFunction ()
     console.log( "mandando mail" );
     e.preventDefault();
 
-    emailjs.sendForm( 'service_8q6uqde', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
+    emailjs.sendForm( 'service_ahdvih9', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
       .then( ( result ) =>
       {
         console.log( result.text );
