@@ -4,8 +4,8 @@ export const QuestionsBr = [
         a: "Você pode começar quando quiser!"
     },
     {
-        q: "Como posso adquirir um plano?",
-        a: "Clique em 'Inscreva-se' e entre em contato conosco sobre suas necessidades e interesses. Em seguida, enviaremos um e-mail com os métodos para começar a comprar horas para o plano que você escolher."
+        q: "Como posso adquirir uma curso?",
+        a: "Primeiro você tem que ter uma sala de aula gratuita. Depois de fazer seu curso gratuito, enviaremos por e-mail as opções para continuar"
     },
     
     {
