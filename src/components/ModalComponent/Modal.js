@@ -230,7 +230,7 @@ export function ContactFormFunction ()
     console.log( "mandando mail" );
     e.preventDefault();
 
-    emailjs.sendForm( 'service_n84kzu1', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
+    emailjs.sendForm( 'service_fndjpiv', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
       .then( ( result ) =>
       {
         console.log( result.text );
