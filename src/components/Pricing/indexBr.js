@@ -5,11 +5,11 @@ import { AiFillStar} from "react-icons/ai"
 import Img from "gatsby-image"
 import { TwoColumnsWrap, ThreeColumnsWrap, FeaturesContainer, FeaturesGrid, Feature, FeatureIcon, FeaturesGod, Icon1 } from "../Features/FeatureElements"
 import { SectionPricingGod, DataWrap, DataTitle, DataSubtitle } from "../Journey/JourneyElements"
-import { PlanContainer, PricingContainer, TwoColumnsPrice, ColumnClassLeft, ColumnClassRight, ClassFtContainer, ClassFt, GradientOffer, GradientTittle, FtTitle,FtDescription, WrapperClassFt, GradientLine } from "./PricingElements"
-import { PricingCarouselBr } from "./PriceCarouselBr"
+import { PlanContainer, PricingContainer, TwoColumnsPrice, ColumnClassLeft, ColumnClassRight, ClassFtContainer, ClassFt, ClassFtGrid, GradientOffer, GradientTittle, FtTitle,FtDescription, WrapperClassFt, GradientLine } from "./PricingElements"
 import { gsap, ScrollTrigger } from "gsap/all";
 import ModalButton from "../Button/Button"
 import ModalButtonBr from "../Button/ButtonBr"
+import { ContactFormFunction } from "./PriceCarouselBr"
 
 
 
@@ -73,9 +73,10 @@ gsap.registerPlugin(ScrollTrigger);
                         
             {/* <GradientOffer>OFERTA</GradientOffer> */}
 
-                        <h3>Faça sua</h3>
-                        <GradientTittle>aula de graça!</GradientTittle>
-            <h5> Escolher um curso que você goste e encontrar o melhor programa para você é uma tarefa importante. É por isso que acreditamos que é essencial que você primeiro faça uma aula gratuita sem compromisso de compra para que possamos nos conhecer.</h5>
+                        <h3>Experimente sua</h3>
+                        <GradientTittle>aula de bem-vinda!</GradientTittle>
+            <h5> Escolher um curso que você goste e encontrar o melhor programa para você é uma tarefa importante. Aproveite nossa oferta única de boas-vindas para testar nossas aulas. 
+              <br/><br/>Esteja ciente de que você pode aceitar esta oferta apenas uma vez.</h5> 
             {/* <h6>RECURSOS DE AULA</h6> */}
             
             <WrapperClassFt>
@@ -95,7 +96,7 @@ gsap.registerPlugin(ScrollTrigger);
                   Duração
                 </FtTitle>
                 <FtDescription>
-                  45 mins
+                  1 hora
                 </FtDescription>
               </ClassFt>
 
@@ -108,23 +109,28 @@ gsap.registerPlugin(ScrollTrigger);
                 </FtDescription>
               </ClassFt>
 
-              <ClassFt>
-                <FtTitle>
-                  Requisitos
-                </FtTitle>
-                <FtDescription>
-                  nenhum
-                </FtDescription>
-              </ClassFt>
-
-              <ClassFt>
+                 <ClassFt>
                 <FtTitle>
                   Preço
                 </FtTitle>
                 <FtDescription>
-                  grátis
+                  R$27
                 </FtDescription>
               </ClassFt>
+
+                <ClassFt>
+                <FtTitle>
+                    Requisitos
+                </FtTitle>
+  
+                  <FtDescription>
+                    nenhum
+                       </FtDescription>
+
+                
+              </ClassFt>
+
+             
 
 
 
@@ -142,7 +148,7 @@ gsap.registerPlugin(ScrollTrigger);
                          </ButtonHolderCenter> */}
                     
         </a>
-        <PricingCarouselBr className="plans"/>
+        <ContactFormFunction className="plans"/>
             
         </SectionPricingGod>
             

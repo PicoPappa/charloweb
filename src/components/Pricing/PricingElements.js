@@ -64,7 +64,7 @@ background:linear-gradient(180deg,rgba(75,78,165,1) 0%,rgba(66, 148, 255,1) 0%,r
 border-bottom-left-radius:4px;
 border-top-left-radius:4px;
 position:relative;
-left:10px;
+box-shadow:1px 5px 2px rgba(0,0,0,0.4);
 
 `
 
@@ -113,6 +113,14 @@ display:flex;
 flex-direction:column;
 row-gap:6px;
 `
+
+export const ClassFtGrid = styled.div`
+display:grid;
+grid-template-columns:repeat(2,1fr);
+column-gap:16px;
+row-gap:6px;
+`
+
 export const FtTitle = styled.h6`
 font-size:10px;
 color:white;
@@ -123,6 +131,7 @@ export const FtDescription = styled.h6`
 font-size:14px;
 color:white;
 margin:0;
+line-height:16px;
 `
 
 export const TwoColumnsPrice = styled.div`

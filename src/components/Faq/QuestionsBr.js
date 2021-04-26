@@ -1,5 +1,9 @@
 export const QuestionsBr = [
     {
+        q: "Qual é o preço da aula?",
+        a: "O preço da aula de bem-vinda é R$27, depóis o preño normal é R$55."
+    },
+    {
         q: "Quando posso começar?",
         a: "Você pode começar quando quiser!"
     },
@@ -10,7 +14,7 @@ export const QuestionsBr = [
     
     {
         q: "Existe um requisito para estudar?",
-        a: "Nem um pouco!"
+        a: "Nem um pouco! Só ter máis de 18 anos e prender a sua camara nas aulas."
     },
     {
         q: "Tenho que comprar material?",

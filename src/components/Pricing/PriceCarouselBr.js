@@ -5,10 +5,11 @@ import styled from "styled-components"
 import "./styleCarousel.css"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
-import { TwoColumnsWrapPricing } from "../Features/FeatureElements"
+import { PricingzFluidContainer, TwoColumnsWrapPricing } from "../Features/FeatureElements"
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io"
 import { ButtonCenter } from "../Button/ButtonElements"
 import { MdClose } from "react-icons/md";
+import {AiFillCheckCircle} from "react-icons/ai"
 import emailjs, { init } from 'emailjs-com';
 import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle'
 
@@ -134,22 +135,50 @@ export const ContactForm = styled.form`
   align-items: left;
   display:flex;
   flex-direction: column;
-  padding-top: 22px;
-    padding-right: 46px;
+  transition:0.8 all ease;
+
     padding-bottom: 46px;
-    padding-left: 46px;
   margin-right:0;
   margin-left:auto;
   box-shadow:0px 5px 10px rgba(0,0,0,0.6);
   margin-top:auto;
   border-radius:10px;
+  display:${( { vanished } ) => ( vanished ? "none" : "flex" )};
+  /* left:${( { click } ) => ( click ? "0" : "-1000px" )}; */
+
+
   background: linear-gradient(180deg,  rgb(56, 54, 81,1) 0%, rgba(34, 28, 43,1) 100%);
   @media screen and (max-width: 690px) {
   margin:auto;
   margin-top:32px;
   width:100%;
   }
+`
 
+
+export const FormHolder = styled.div`
+  padding-top:20px;
+      padding-right: 46px;
+      padding-left: 46px;
+        width: 90%;
+        justify-content: center;
+  align-items: left;
+  display:flex;
+  flex-direction: column;
+  transition:0.8 all ease;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top:auto;
+  border-radius:10px;
+  @media screen and (max-width: 690px) {
+  margin:auto;
+
+  width:100%;
+  }
+  @media screen and (max-width: 390px) {
+  padding-left:26px;
+  padding-right:26px;
+  }
   `
 
   export const ContactLabel = styled.label`
@@ -157,11 +186,11 @@ export const ContactForm = styled.form`
   margin-left:0px;
   display:flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   font-size: 10px;
   line-height:16px;
-  font-weight: 600;
+  font-weight: 400;
   color: #d2d2d4;
   
   `
@@ -171,14 +200,17 @@ export const ContactInput = styled.input`
   display:flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align:center;
-  background:transparent;
-  border-bottom:1px solid #b2b2b2;
-  font-size: 14px;
+  align-items: left;
+  text-align:left;
+  padding-left:6%;
+  background:white;
+
+  font-size: 12px;
   line-height:30px;
+    border-radius:4px;
+
   font-weight: 600;
-  color: white;
+  color: #312d44;
   ::placeholder{
     font-weight:300;
     font-style:italic;
@@ -211,65 +243,134 @@ export const ContactInput = styled.input`
 
 const TitleForm = styled.h2`
   color:white;
-  font-size:24px;
-  width:200px;
-  margin-bottom:16px;
+  font-size:20px;
+  width:250px;
+margin:auto;
+
   text-align:center;
   justify-content: center;
   align-items: center;
   align-self:center;
   justify-self:center;
       @media screen and (max-width: 820px) {
-    font-size:20px;
+    font-size:16px;
     justify-self:center;
     align-self:center;
     width:100%;
     }
   
   `
-const OfferContainer = styled.div`
-margin-bottom:32px;
+const SuccessWraper = styled.div`
 
+margin:auto;
+        display:none;
+margin-bottom:32px;
+      @media screen and (max-width: 690px) {
+      margin-top:100px;
+      }
+
+
+/* left:${( { click } ) => ( click ? "0" : "-1000px" )}; */
 `
 
-const TitleOffer = styled.h6`
-  color:#3859ff;
+const IconSuccess = styled( AiFillCheckCircle )`
+
+align-items: center;
+color:#6775FF;
+font-size:100px;
+margin:auto;
+margin-bottom:32px;
+`
+
+const SucessContainer = styled.div`
+display:flex;
+flex-direction:column;
+align-items:center;
+
+
+  justify-content: center;
+  align-self:center;
+  justify-self:center;
+  margin:auto;
+  border-radius:10px;
+  @media screen and (max-width: 690px) {
+  width:100%;
+  }
+`
+
+export const TitleOffer = styled.h5`
+  color:white;
+  font-size:14px;
+  font-weight:600;
   justify-self:center;
   text-align:center;
+  margin:auto;
   `
 
 
-  export const ContactInterest = styled.select`
-  padding-left:4%;
+export const ContactInterest = styled.select`
+  border-style:none;
+  padding-left:6%;
   padding-top:9px;
   padding-bottom:9px;
   display:flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
   font-size: 12px;
   line-height:30px;
   font-weight: 600;
-  color: #acaeb0;
-  border:2px solid #ededed;
-  border-radius:4px ;
+  background:transparent;
+  color: white;
+  border-radius:4px;
+  border:1px solid #b2b2b2;
+  ::placeholder{
+font-weight:300;
+    font-style:italic;
+  }
+
+
   `
+
+
 
   export const InterestOption = styled.option`
   margin-top: 30px;
-  padding-left:4%;
+  padding-left:auto;
+  padding-right:auto;
   padding-top:9px;
   padding-bottom:9px;
   display:flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
+    text-align:center;
+  
   font-size: 12px;
   line-height:30px;
   font-weight: 600;
+  color: #46454f;
+
+  `
+
+   export const InterestOptionDefault = styled.option`
+  margin-top: 30px;
+  padding-left:auto;
+  padding-right:auto;
+  padding-top:9px;
+  padding-bottom:9px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    text-align:center;
+  
+  font-size: 12px;
+  line-height:30px;
+  font-weight: 300;
   color: #d2d2d4;
-  border:2px solid #ededed;
-  border-radius:4px ;
+
   `
 
 
@@ -288,193 +389,158 @@ font-size:16px;
 color:#141414;
 `
 
+export const InputHolder = styled.div`
+margin-top:36px;
+font-size:14px;
+color:#d2d2d4;
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+column-gap:8px;
+`
+
+export const Terms = styled.p`
+font-size:12px;
+color:#d2d2d4;
+font-weight:600;
+`
+
+export const OfferHolder = styled.div`
+background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%);
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+height:33px;
+justify-content:center;
+align-items:center;
+`
 
 
-export function ContactFormFunction ()
+
+export function ContactFormFunction()
 {
-  function showMessage() {
-    document.getElementById( "titlesent" ).innerHTML = "Parabéns! Em breve enviaremos um e-mail"
-    document.getElementById( "titlesent" ).style.width = "300px";
 
-  }
+  const [ vanished, setVanished ] = React.useState( false );
+
+  const [ click, setClick ] = React.useState( false );
+  const [disabled,setDisabled]=React.useState(false);
+
+
+
+
+  const handleCheckChange = (event) => {
   
+      setClick( event.target.checked );
+    console.log( click + "vanished" + vanished );
 
-const Completionist = () => <span>You are good to go!</span>;
 
-  function sendEmail ( e )
-  {
-    console.log( "mandando mail" );
-    e.preventDefault();
+     
+  };
 
-    emailjs.sendForm( 'service_119efii', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
-      .then( ( result ) =>
-      {
-        console.log( result.text );
-      }, ( error ) =>
-      {
-        console.log( error.text );
-      } );
-    e.target.reset();
-  }
-  return (
-    <>
-      <ContactForm onSubmit={ sendEmail }>
-        <OfferContainer>
+   const handleVanishChange = (event) => {
+  
+      setVanished( true );
+    console.log( "vanished" + vanished );
 
-          
-          </OfferContainer>
-                        <TitleForm id="titlesent">Reserve a sua aula gratuita!</TitleForm>
-                        <ContactLabel>NOME</ContactLabel>
-                        <ContactInput type="text" name="user_name" placeholder="
-Escreva o seu nome aqui"/>
-                        <ContactLabel>EMAIL</ContactLabel>
-        <ContactInput type="email" name="user_email" id="email_input" placeholder="
-Escreva o seu email aqui" />
-        <div>
 
-    </div>
-                        {/* <ContactLabel>INTERESSE</ContactLabel>
-                        <ContactInterest name="interest" id="c-form-profession">
-                          <option value="">SELECIONE SEU INTERESSE</option>
-                           <InterestOption value="Free one-on-one class">Aula Privada</InterestOption>
-                           <InterestOption value="Two-Student class">Aula de Dois Alunos</InterestOption>
-                          <InterestOption value="Chat Session">Aula de Chat</InterestOption>
-                          <InterestOption value="Other">Outro</InterestOption>
-        </ContactInterest> */}
-        {/* <ContactLabel>COMENTÁRIOS (OPCIONAL)</ContactLabel>
-                        <MessageInput rows="2" type="comments" name="comments" /> */}
+     
+  };
 
-        
-        <ButtonCenter name="submit" type="submit" value="Submit" onClick={ showMessage }>ENVIAR</ButtonCenter>
 
-      </ContactForm>
-
-      
-    </>
-  )
+    function showMessage ()
+    {
+      document.getElementById( "form-container" ).style.display = "none";
+      document.getElementById( "sucess-container" ).style.display = "flex";
     
-}
 
-export function PricingCarouselBr ()
-{
-  
+    }
 
-  
-    const data = useStaticQuery(graphql`
+
+    function sendEmail ( e )
+    {
+      console.log( "mandando mail" );
+      e.preventDefault();
+          showMessage();
+
+      emailjs.sendForm( 'service_119efii', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
+        .then( ( result ) =>
+        {
+          console.log( result.text );
+
+        }, ( error ) =>
+        {
+          console.log( error.text );
+        } );
+      e.target.reset();
+  }
+  const data = useStaticQuery(graphql`
     query {
-      one: file(relativePath: { eq: "PrivateClass2.png" }) {
+      file(relativePath: { eq: "PrivateClass3.png" }) {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels
           fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    
-
-      two: file(relativePath: { eq: "DuoClass.png" }) {
-        childImageSharp {
-          # Specify a fixed image and fragment.
-          # The default width is 400 pixels
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
-
-
-  three: file(relativePath: { eq: "Headset.png" }) {
-        childImageSharp {
-          # Specify a fixed image and fragment.
-          # The default width is 400 pixels
-          fluid{
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
-  
-  return (
-    <>
-      <ContactFormFunction></ContactFormFunction>
-      <div class="container">
-        
-     <IconContainers>
-            <LeftIcon></LeftIcon>
-            <RightIcon></RightIcon>
-          </IconContainers>
-    <input type="radio" name="slider" id="item-1" defaultChecked/>
-    <input type="radio" name="slider" id="item-2"/>
-    <input type="radio" name="slider" id="item-3"/>
-        <div class="cards">
-         
-          <label class="card" for="item-1" id="song-1">
-            <div class="bg1" >
-              <TwoColumnsWrapPricing>
-                
-                <div class="textPlan1">
-                  <h2>Aula Particular</h2>
-                  <p>Aprenda o máximo em uma
-                  <b> aula individual ao vivo </b>
-                  com foco nas suas necessidades.</p>
-                
 
-                  <div class="priceContainer">
-                    <h4>R$55/hr</h4>
-                    </div>
-                </div>
-                <div class="imgc" >
-                  <Img fluid={ data.one.childImageSharp.fluid } alt="Girl drinking tea with thumb up" />
-                </div>
-                </TwoColumnsWrapPricing>
-            </div>
-          </label>
+
+    return (
+      <>
+        <SuccessWraper id="sucess-container">
           
-          <label class="card" for="item-2" id="song-2">
-            <div class="bg2" >
-              <TwoColumnsWrapPricing>
-                
-                <div class="textPlan2">
-                  <h2>Aula de dois alunos</h2>
-                  <p>Aprenda com um parceiro
-                  <b> em uma classe de dois alunos </b>
-                  e cresça juntos.</p>
-                  <div class="priceContainer">
-                    <h4>R$39/hr</h4>
-                    </div>
-                  </div>
-                <div class="imgc2" >
-                  <Img fluid={ data.two.childImageSharp.fluid } alt="Two students smiling" />
-                </div>
-                </TwoColumnsWrapPricing>
-            </div>
-          </label>
-          
-          <label class="card" for="item-3" id="song-3">
-            <div class="bg3" >
-              <TwoColumnsWrapPricing>
-                
-                <div class="textPlan2">
-                  <h2>Aula de chat</h2>
-                  <p>Pratique suas habilidades de conversação
-                   <b> em uma aula de chat </b> 
-                   com um falante nativo da Argentina.</p>
-                  <div class="priceContainer">
-                    <h4>R$28</h4>
-                    </div>
-                </div>
-                <div class="imgc3" >
-                  <Img fluid={ data.three.childImageSharp.fluid } alt="headset" />
-                </div>
-                </TwoColumnsWrapPricing>
-            </div>
-    </label>
-  </div>
-      </div>
+          <SucessContainer >
+            <PricingzFluidContainer>
+              <Img fluid={ data.file.childImageSharp.fluid } alt="" />
+              </PricingzFluidContainer>
+              <TitleForm id="titlesent">Parabens! Em breve te enviaremos um mail.</TitleForm>
+            </SucessContainer>
+          </SuccessWraper>
+        
+
+        
+        <ContactForm onSubmit={ sendEmail } id="form-container" vanish={vanished}>
+          <OfferHolder>
+          <TitleOffer>Oferta Limitada - 50% OFF</TitleOffer>
+          </OfferHolder>
+          <FormHolder>
+       
+            
+          <ContactLabel>NOME</ContactLabel>
+          <ContactInput type="text" name="user_name" placeholder="Escreva o seu nome aqui" />
+          <ContactLabel>EMAIL</ContactLabel>
+          <ContactInput type="email" name="user_email" placeholder="Escreva o seu email aqui" id="email_input"  />
+          <div>
+
+          </div>
+          <ContactLabel>PAÍS DE RESIDÊNCIA</ContactLabel>
+          <ContactInterest name="interest" id="c-form-profession">
+                                       <InterestOption value="Brasil">Brasil</InterestOption>
+                           <InterestOption value="Argentina">Argentina</InterestOption>
+
+
+        </ContactInterest>
+          {/* <ContactLabel>COMENTÁRIOS (OPCIONAL)</ContactLabel>
+                        <MessageInput rows="2" type="comments" name="comments" /> */}
+          <InputHolder>
+          <input type="checkbox" id="checkboxid" click={ click } onClick={ handleCheckChange } />
+          <Terms>Eu tenho máis de 18 anos e vou prender a minha camara nas aulas.</Terms>
+          </InputHolder>
+        
+            <ButtonCenter name="submit" type="submit" value="Submit" click={ click }>SOLICITAR INFORMACÃO</ButtonCenter>
+            </FormHolder>
+
+
+
+
+        </ContactForm>
+
       
-    </>
-)
-}
+      </>
+    )
+    
+  }
+

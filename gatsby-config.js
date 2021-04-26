@@ -60,6 +60,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
+    resolve: 'gatsby-plugin-mailchimp',
+        options: {
+            endpoint: 'https://charlo.us1.list-manage.com/subscribe/post?u=cc5d3e4e1a5ff25633dd282dd&amp;id=c689b3896e', // string; add your MC list endpoint here; see instructions below
+            timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+        },
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-MMFWLF8",
@@ -77,7 +84,7 @@ module.exports = {
 
       },
     },
-    
+
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

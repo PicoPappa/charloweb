@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
-import JourneySection from "../Journey/index"
 import { MenuIcon, MobileIcon, Nav, NavbarContainer, NavIcon, NavLogo, NavMenu, NavItem, NavLinks, DarkBackground } from "./NavbarElements"
 
 const Navbar = () =>{

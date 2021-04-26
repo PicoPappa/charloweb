@@ -15,7 +15,7 @@ const openModal = () =>
 
   return (
     <> 
-    < ButtonMobile href="#pricing" >RESERVE SUA AULA GRÁTIS</ButtonMobile>
+    < ButtonMobile href="#pricing" >RESERVE SUA AULA DE GRAÇA</ButtonMobile>
     
     < ModalBr showModal={ showModal } setShowModal={ setShowModal } />
     </>

@@ -164,15 +164,41 @@ height:120px;
 }
 `
 export const CircleJourneyFluidContainer = styled.div`
+justify-content:center;
+align-content:center;
 align-self:center;
+margin-left:auto;
+margin-right:auto;
 width:0px;
+
 height:0px;
 position:relative;
 transition: 0.8s all ease;
 @media screen and (max-width: 690px) {
 top:-10px;
-width:160px;
-height:160px;
+width:120px;
+margin-bottom:42px;
+height:120px;
+}
+`
+
+export const CircleJourneyFluidContainerLevels = styled.div`
+justify-content:center;
+align-content:center;
+align-self:center;
+margin-left:auto;
+margin-right:auto;
+width:0px;
+
+height:0px;
+position:relative;
+transition: 0.8s all ease;
+@media screen and (max-width: 690px) {
+top:-10px;
+width:120px;
+margin-top:50px;
+height:240px;
+margin-bottom:16px;
 }
 `
 
@@ -246,16 +272,48 @@ background: linear-gradient(rgba(75,78,165,1) 0%, rgba(92, 134, 249,1) 0%, rgba(
     display:none;
   } 
 `
+export const PricingzFluidContainer = styled.div`
+
+width: 300px;
+    height: 300px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    top:-40px;
+    /* margin-top: 110px; */
+    padding: 20px;
+    position: relative;
+    border-radius: 500px;
+    -webkit-transition: 0.8s all ease;
+    transition: 0.8s all ease;
+    
+    background: linear-gradient(rgba(75,78,165,1) 0%,rgba(92,134,249,1) 0%,rgba(108,48,219,1) 100%);
+       @media screen and (max-width: 490px) {
+    width:200px;
+    height:200px;
+  } 
+`
 
 export const JourneyFluidContainer = styled.div`
-width:380px;
+width:360px;
+margin-top:30px;
 align-self:center;
 justify-content:center;
 justify-self:center;
     transition: 0.8s all ease;
 
 @media screen and (max-width: 960px) {
-    width:360px;
+    width:300px;
 
   }
 
@@ -271,6 +329,39 @@ justify-self:center;
 
   @media screen and (max-width: 740px) {
     width:300px;
+    margin-bottom:120px;
+  }
+
+   @media screen and (max-width: 690px) {
+    display:none;
+  }
+`
+
+export const JourneyFluidContainerLevels = styled.div`
+width:200px;
+margin-top:30px;
+align-self:center;
+justify-content:center;
+justify-self:center;
+    transition: 0.8s all ease;
+
+@media screen and (max-width: 960px) {
+    width:180px;
+
+  }
+
+  @media screen and (max-width: 820px) {
+    width:160px;
+
+  }
+  
+  @media screen and (max-width: 780px) {
+    width:220px;
+
+  }
+
+  @media screen and (max-width: 740px) {
+    width:200px;
     margin-bottom:120px;
   }
 

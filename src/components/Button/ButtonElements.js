@@ -89,12 +89,29 @@ export const ButtonCenter = styled.button`
   color: white;
   font-weight: 700;
   margin-top:46px;
+      color:${( { click } ) => ( click ? "white" : "#998faa" )};
+    background:${( { click } ) => ( click ? "background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%)" : "#554e63" )};
+    pointer-events:${( { click } ) => ( click ? "auto":"none")}; 
+  transition:0.8 all ease;
    &:hover{
         /* background: linear-gradient(90deg, rgba(123,67,255,1)  0%, rgba(223,79,180,1) 100%); */
         box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
         transform: translatey(-10%);
         transition:all 0.4s ease;
     }
+  input:disabled {
+  background: #ccc;
+  
+}
+@media screen and (max-width: 904px) {
+  font-size:12px;
+}
+@media screen and (max-width: 346px) {
+  font-size:11px;
+}
+@media screen and (max-width: 320px) {
+  font-size:9px;
+}
 `
 
 
@@ -102,7 +119,7 @@ export const ButtonCenter = styled.button`
 
 
 export const ButtonHolder = styled.div`
-margin-top:80px;
+margin-top:36px;
 display:flex;
 color:#ADAECD;
 font-size:16px;

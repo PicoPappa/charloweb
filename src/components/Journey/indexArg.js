@@ -3,7 +3,7 @@ import { Button, ButtonHolder } from "../Button/ButtonElements"
 import { AiFillStar} from "react-icons/ai"
 import Img from "gatsby-image"
 import { TwoColumnsWrapJourney, ThreeColumnsWrap, FeaturesContainer, FeaturesGrid, Feature, FeatureIcon, FeaturesGod, Icon1,ImageContainer2, JourneyFluidContainer, CircleJourney, CircleJourneyFluidContainer, FeaturesFluidContainer, FeaturesCircleContainer } from "../Features/FeatureElements"
-import { SectionGod, DataWrap, DataTitle, DataSubtitle } from "./JourneyElements";
+import { SectionGod, DataWrap, DataSubtitle, DataIcon1, DataHolder, DataIcon2, DataIcon3 } from "./JourneyElements";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { useStaticQuery, graphql } from "gatsby"
 import ModalButton from "../Button/Button"
@@ -18,7 +18,7 @@ export const videoStyle=styled.video`
   position: absolute;
 `
 
-function JourneySection ()
+export default function NeedsSectionArg ()
 {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -73,7 +73,7 @@ function JourneySection ()
 
         const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "JourneySectionImage.png" }) {
+      file(relativePath: { eq: "argentina2.png" }) {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels
@@ -88,40 +88,40 @@ function JourneySection ()
       <SectionGod ref={ ref }>
         <a id="journeyAnchor">
           
-          <CircleJourney>
+
             <CircleJourneyFluidContainer>
               <Img fluid={ data.file.childImageSharp.fluid } alt="" />
             </CircleJourneyFluidContainer>
-          </CircleJourney>
+
           
 
             <TwoColumnsWrapJourney>
                    
           <div>
                     <FeaturesContainer className="title">
-                            <h6>EXPERIENCE</h6>
-                            <h3>Discover a</h3>
-                    <h2>wonderful culture</h2>
-                    <h5>Take your the time get to know the joy of the culture, music and literature ride with us.</h5>
-                    <ThreeColumnsWrap>
+                            <h6>NECESSIDADES</h6>
+                            <h3>Adapte-se à</h3>
+                    <h2>vida na Argentina</h2>
+                    <h5>Recebemos muitos brasileiros <b>estudando em universidades argentinas</b>. Também temos muitos alunos que vieram ao nosso <b>país para trabalhar</b>. Em qualquer caso, vamos ajudá-lo a se adaptar para sobreviver à nossa língua!</h5>
+                    <DataHolder>
                         <DataWrap>
-                            <DataTitle>+5500</DataTitle>
-                            <DataSubtitle>Students</DataSubtitle>
+                            <DataIcon1></DataIcon1>
+                            <DataSubtitle>Aprenda nossa linguagem cotidiana</DataSubtitle>
                         </DataWrap>
                         <DataWrap>
-                            <DataTitle>+5500</DataTitle>
-                            <DataSubtitle>Students</DataSubtitle>
+                            <DataIcon2></DataIcon2>
+                            <DataSubtitle>Corrigi seus documentos e apresentações</DataSubtitle>
                         </DataWrap>
                         <DataWrap>
-                            <DataTitle>+5500</DataTitle>
-                            <DataSubtitle>Students</DataSubtitle>
+                            <DataIcon3></DataIcon3>
+                            <DataSubtitle>Conheça nossa cultura</DataSubtitle>
                         </DataWrap>
-                    </ThreeColumnsWrap>
+                    </DataHolder>
                     
           </FeaturesContainer>
           <ButtonHolder>
-                     <ModalButton>Try 1-on-1 class free</ModalButton>
-                      <p>No credit card needed.</p>
+                     <ModalButton></ModalButton>
+
                     </ButtonHolder>
           </div>
                     <JourneyFluidContainer className="pic" >
@@ -136,5 +136,3 @@ function JourneySection ()
         
     )
 }
-
-export default JourneySection
