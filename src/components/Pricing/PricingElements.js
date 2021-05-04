@@ -106,6 +106,10 @@ width:96%;
      @media screen and (max-width: 690px) {
      background:rgb(56, 54, 81,1);
      }
+     @media screen and (max-width: 390px) {
+     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+     padding:16px;
+     }
 `
 
 export const ClassFt = styled.div`
@@ -119,6 +123,7 @@ display:grid;
 grid-template-columns:repeat(2,1fr);
 column-gap:16px;
 row-gap:6px;
+
 `
 
 export const FtTitle = styled.h6`
@@ -132,6 +137,12 @@ font-size:14px;
 color:white;
 margin:0;
 line-height:16px;
+`
+
+export const FtDescriptionMini = styled.h6`
+font-size:10px;
+color:white;
+margin:0;
 `
 
 export const TwoColumnsPrice = styled.div`
@@ -174,4 +185,13 @@ background: white;
 export const Prici = styled.div`
 align-items:center;
 justify-content:center;
+`
+
+export const OfferCircle = styled.div`
+width:30px;
+height:30px;
+border-radius:30px;
+background-color:#6775FF;
+position:absolute;
+transform:translateX(-6%);
 `

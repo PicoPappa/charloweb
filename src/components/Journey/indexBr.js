@@ -122,8 +122,8 @@ Nós o preparamos para fazer os exames que permitirão que você trabalhe em tod
 
                     </ButtonHolder>
           </div>
-                    <JourneyFluidContainerLevels className="pic" >
-                            <Img fluid={ data.file.childImageSharp.fluid } alt=""   />
+                    <JourneyFluidContainerLevels >
+                            <Img fluid={ data.file.childImageSharp.fluid } alt="" className="pic"   />
                             </JourneyFluidContainerLevels>
           </TwoColumnsWrapJourney>
           <CircleJourneyFluidContainerLevels>

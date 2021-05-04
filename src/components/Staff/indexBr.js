@@ -91,7 +91,7 @@ function StaffSectionBr (){
                         <Img fluid={ data.file.childImageSharp.fluid } alt="group of teachers on a classroom" />
                 </StaffFluidContainer>
                 <StaffInfoWidth>
-                        <h5>Somos uma escola moderna feita para alunos modernos com mais de  <b>30 anos de experiência</b>. Nossos professores são <b>falantes nativos da Argentina</b> totalmente preparados para ajudá-lo a descobrir um novo mundo de forma eficaz e confortável. Atribuiremos a você um <b>professor especializado</b> que atenda às suas necessidades e o ajude a alcançar seus objetivos. Cada professor é <b>totalmente certificado</b>.</h5>
+                        <h5>Somos uma escola moderna feita para alunos modernos com mais de  <b>15 anos de experiência</b>. Nossos professores são <b>falantes nativos da Argentina</b> totalmente preparados para ajudá-lo a descobrir um novo mundo de forma eficaz e confortável. Atribuiremos a você um <b>professor especializado</b> que atenda às suas necessidades e o ajude a alcançar seus objetivos. Cada professor é <b>totalmente certificado</b>.</h5>
                         </StaffInfoWidth>
                         </StaffInfo>
                         

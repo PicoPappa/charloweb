@@ -124,8 +124,8 @@ export default function NeedsSectionArg ()
 
                     </ButtonHolder>
           </div>
-                    <JourneyFluidContainer className="pic" >
-                            <Img fluid={ data.file.childImageSharp.fluid } alt=""   />
+                    <JourneyFluidContainer  >
+                            <Img fluid={ data.file.childImageSharp.fluid } alt="" className="pic"  />
                             </JourneyFluidContainer>
                 </TwoColumnsWrapJourney>
             </a>

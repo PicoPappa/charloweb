@@ -5,7 +5,7 @@ import { AiFillStar} from "react-icons/ai"
 import Img from "gatsby-image"
 import { TwoColumnsWrap, ThreeColumnsWrap, FeaturesContainer, FeaturesGrid, Feature, FeatureIcon, FeaturesGod, Icon1 } from "../Features/FeatureElements"
 import { SectionPricingGod, DataWrap, DataTitle, DataSubtitle } from "../Journey/JourneyElements"
-import { PlanContainer, PricingContainer, TwoColumnsPrice, ColumnClassLeft, ColumnClassRight, ClassFtContainer, ClassFt, ClassFtGrid, GradientOffer, GradientTittle, FtTitle,FtDescription, WrapperClassFt, GradientLine } from "./PricingElements"
+import { PlanContainer, PricingContainer, TwoColumnsPrice, ColumnClassLeft, ColumnClassRight, ClassFtContainer, ClassFt, ClassFtGrid, GradientOffer, GradientTittle, FtTitle,FtDescription, FtDescriptionMini, WrapperClassFt, GradientLine, OfferCircle } from "./PricingElements"
 import { gsap, ScrollTrigger } from "gsap/all";
 import ModalButton from "../Button/Button"
 import ModalButtonBr from "../Button/ButtonBr"
@@ -111,7 +111,7 @@ gsap.registerPlugin(ScrollTrigger);
 
                  <ClassFt>
                 <FtTitle>
-                  Preço
+                    Preço
                 </FtTitle>
                 <FtDescription>
                   R$27

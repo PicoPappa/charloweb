@@ -84,6 +84,14 @@ module.exports = {
 
       },
     },
+// In your gatsby-config.js
+
+  {
+    resolve: `gatsby-plugin-facebook-pixel`,
+    options: {
+      pixelId: "902373627251795",
+    },
+  },
 
     `gatsby-plugin-sharp`,
     {
