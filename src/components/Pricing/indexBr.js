@@ -74,7 +74,7 @@ gsap.registerPlugin(ScrollTrigger);
             {/* <GradientOffer>OFERTA</GradientOffer> */}
 
                         <h3>Experimente sua</h3>
-                        <GradientTittle>aula de bem-vinda!</GradientTittle>
+                        <GradientTittle>aula de<br/>boas-vindas!</GradientTittle>
             <h5> Escolher um curso que você goste e encontrar o melhor programa para você é uma tarefa importante. Aproveite nossa oferta única de boas-vindas para testar nossas aulas. 
               <br/><br/>Esteja ciente de que você pode aceitar esta oferta apenas uma vez.</h5> 
             {/* <h6>RECURSOS DE AULA</h6> */}

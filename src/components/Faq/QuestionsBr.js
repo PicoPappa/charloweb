@@ -1,14 +1,14 @@
 export const QuestionsBr = [
     {
         q: "Qual é o preço da aula?",
-        a: "O preço da aula de bem-vinda é R$27, depóis o preño normal é R$55."
+        a: "O preço da aula de boas-vindas é R$27. Depóis se você escolhe continuar, o preço é R$55."
     },
     {
         q: "Quando posso começar?",
         a: "Você pode começar quando quiser!"
     },
     {
-        q: "Como posso adquirir uma curso?",
+        q: "Como posso adquirir um curso?",
         a: "Primeiro você tem que ter uma sala de aula gratuita. Depois de fazer seu curso gratuito, enviaremos por e-mail as opções para continuar"
     },
     

@@ -14,7 +14,7 @@ const openModal = () =>
 
   return (
     <> 
-    < ButtonMobile onClick = { openModal } >RESERVE SUA AULA DE GRAÇA</ButtonMobile>
+    < ButtonMobile onClick = { openModal } >EXPERIMENTE UMA AULA</ButtonMobile>
     
     < Modal showModal={ showModal } setShowModal={ setShowModal } />
     </>

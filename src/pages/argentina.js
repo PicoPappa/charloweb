@@ -16,7 +16,7 @@ import NeedsSectionArg from "../components/Journey/indexArg"
 
 const IndexPageArg = () => (
   <Layout>
-    <SEO title="Charlo Argentina" />
+    <SEO title="Home" />
     <HeroSectionBr />
     <FeaturesSectionBr />
     <NeedsSectionArg></NeedsSectionArg>

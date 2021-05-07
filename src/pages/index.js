@@ -12,7 +12,7 @@ import FaqAccordion from "../components/Faq"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Charlo Brasil" />
+    <SEO title="Home" />
     <HeroSectionBr />
     <FeaturesSectionBr />
         <NeedsSection />

@@ -88,7 +88,6 @@ export default function NeedsSection ()
       <SectionGod ref={ ref }>
         <a id="journeyAnchor">
           
-
             
           
 
@@ -96,7 +95,7 @@ export default function NeedsSection ()
                    
           <div>
                     <FeaturesContainer className="title">
-                            <h6>NIVÉIS</h6>
+                            <h6>NÍVEIS</h6>
                             <h3>Aulas para</h3>
                     <h2>Todos os níveis</h2>
                     <h5>Não importa se você é um iniciante ou se está no meio do caminho.

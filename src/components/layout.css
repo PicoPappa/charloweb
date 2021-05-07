@@ -1,8 +1,8 @@
 html {
   scroll-behavior: smooth;
-  background: rgb(75, 78, 165);
+  background: rgb(33, 35, 78);
   background: linear-gradient(
-    rgba(75, 78, 165, 1) 0%,
+    rgba(33, 35, 78, 1) 0%,
     rgb(20, 18, 29) 35%,
     rgb(46, 45, 68) 100%
   );

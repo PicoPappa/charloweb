@@ -11,6 +11,8 @@ import "../Journey/journeyStyle.css"
 import {FluidContainer } from "../Features/FeatureElements"
 import backgroundVideo from "../../videos/video.webm"
 import ModalButtonMobileBr from "../Button/ButtonMobileBr"
+import { gsap, ScrollTrigger } from "gsap/all";
+
 
 const TickIcon = styled( TiTick )`
 font-size:20px;
@@ -32,7 +34,10 @@ color:#56cafc;
 
 
 
-export default function HeroSection() {
+export default function HeroSection ()
+{
+
+
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "logo3.png" }) {
@@ -57,27 +62,26 @@ export default function HeroSection() {
         </div>
       <div className="hero-container">
         {/* <Circle>
-          <CircleFluidContainer>
+          <CircleFluidContainer>{}
             <Img fluid={ data.file.childImageSharp.fluid } alt="" />
           </CircleFluidContainer>
         </Circle> */}
         <FluidContainer>
                  <Img fluid={ data.file.childImageSharp.fluid } alt="logo" />
                </FluidContainer>
-                        <h1><b>Aprenda Espanhol<br/>Online</b>
+                        <h1><b>Aprenda o Espanhol<br/>de Argentina</b>
                         </h1>
 
 
                     <ul>
                         <li><TickIcon/>Amigável para iniciantes.</li>
-                        <li><TickIcon/>Aprenda com professores nativos de Argentina</li>
-                        <li><TickIcon/>Melhores preços e qualidade na indústria</li>
+                        <li><TickIcon/>Professores nativos de Argentina</li>
+                        <li><TickIcon/>Preços e qualidade #1</li>
                     </ul>
-                    <ButtonHolderMobile>
+                    <ButtonHolderMobile  className="buttonstick">
                        <ModalButtonMobileBr>
 
                        </ModalButtonMobileBr>
-                        <p> Não precisa de cartão de crédito.</p>
                     </ButtonHolderMobile>
                </div>
             
