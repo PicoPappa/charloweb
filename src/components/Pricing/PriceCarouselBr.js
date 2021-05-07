@@ -9,7 +9,7 @@ import { PricingzFluidContainer, TwoColumnsWrapPricing } from "../Features/Featu
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io"
 import { ButtonCenter } from "../Button/ButtonElements"
 import { MdClose } from "react-icons/md";
-import {AiFillCheckCircle} from "react-icons/ai"
+import { AiFillCheckCircle } from "react-icons/ai"
 import emailjs, { init } from 'emailjs-com';
 import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle'
 
@@ -44,7 +44,7 @@ height:200px;
   grid-template-columns: repeat(2, 1fr);
  }
 `
- export const FixedWrapper = styled.div`
+export const FixedWrapper = styled.div`
   position:fixed;
   width:100vw;
 
@@ -54,7 +54,7 @@ height:200px;
   z-index:4;
   left:0;
   top:0;
-` 
+`
 
 const Background = styled.div`
 
@@ -112,7 +112,7 @@ const ModalContent = styled.div`
   color: #141414;
 `
 
-const CloseModalButton = styled(MdClose)`
+const CloseModalButton = styled( MdClose )`
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -143,8 +143,8 @@ export const ContactForm = styled.form`
   box-shadow:0px 5px 10px rgba(0,0,0,0.6);
   margin-top:auto;
   border-radius:10px;
-  display:${( { vanished } ) => ( vanished ? "none" : "flex" )};
-  /* left:${( { click } ) => ( click ? "0" : "-1000px" )}; */
+  display:${ ( { vanished } ) => ( vanished ? "none" : "flex" ) };
+  /* left:${ ( { click } ) => ( click ? "0" : "-1000px" ) }; */
 
 
   background: linear-gradient(180deg,  rgb(56, 54, 81,1) 0%, rgba(34, 28, 43,1) 100%);
@@ -181,7 +181,7 @@ export const FormHolder = styled.div`
   }
   `
 
-  export const ContactLabel = styled.label`
+export const ContactLabel = styled.label`
   margin-top: 30px;
   margin-left:0px;
   display:flex;
@@ -216,7 +216,7 @@ export const ContactInput = styled.input`
     font-style:italic;
   }
   `
-  export const MessageInput= styled.textarea`
+export const MessageInput = styled.textarea`
   padding:4%;
   display:flex;
 
@@ -270,7 +270,7 @@ margin-bottom:32px;
       }
 
 
-/* left:${( { click } ) => ( click ? "0" : "-1000px" )}; */
+/* left:${ ( { click } ) => ( click ? "0" : "-1000px" ) }; */
 `
 
 const IconSuccess = styled( AiFillCheckCircle )`
@@ -335,7 +335,7 @@ font-weight:300;
 
 
 
-  export const InterestOption = styled.option`
+export const InterestOption = styled.option`
   margin-top: 30px;
   padding-left:auto;
   padding-right:auto;
@@ -354,7 +354,7 @@ font-weight:300;
 
   `
 
-   export const InterestOptionDefault = styled.option`
+export const InterestOptionDefault = styled.option`
   margin-top: 30px;
   padding-left:auto;
   padding-right:auto;
@@ -417,63 +417,71 @@ align-items:center;
 
 
 
-export function ContactFormFunction()
+export function ContactFormFunction ()
 {
 
   const [ vanished, setVanished ] = React.useState( false );
 
   const [ click, setClick ] = React.useState( false );
-  const [disabled,setDisabled]=React.useState(false);
+  const [ disabled, setDisabled ] = React.useState( false );
 
 
 
 
-  const handleCheckChange = (event) => {
-  
-      setClick( event.target.checked );
+  const handleCheckChange = ( event ) =>
+  {
+
+    setClick( event.target.checked );
     console.log( click + "vanished" + vanished );
 
 
-     
+
   };
 
-   const handleVanishChange = (event) => {
-  
-      setVanished( true );
+  const handleVanishChange = ( event ) =>
+  {
+
+    setVanished( true );
     console.log( "vanished" + vanished );
 
 
-     
+
   };
 
 
-    function showMessage ()
+  function showMessage ()
+  {
+    document.getElementById( "form-container" ).style.display = "none";
+    document.getElementById( "sucess-container" ).style.display = "flex";
+    if ( typeof window !== "undefined" )
     {
-      document.getElementById( "form-container" ).style.display = "none";
-      document.getElementById( "sucess-container" ).style.display = "flex";
-    
-
+      if ( window.fbq != null )
+      {
+        window.fbq( 'track', 'Lead', { currency: "USD", value: 9.99 } );
+      }
     }
 
-
-    function sendEmail ( e )
-    {
-      console.log( "mandando mail" );
-      e.preventDefault();
-          showMessage();
-
-      emailjs.sendForm( 'service_119efii', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
-        .then( ( result ) =>
-        {
-          console.log( result.text );
-
-        }, ( error ) =>
-        {
-          console.log( error.text );
-        } );
-      e.target.reset();
   }
-  const data = useStaticQuery(graphql`
+
+
+  function sendEmail ( e )
+  {
+    console.log( "mandando mail" );
+    e.preventDefault();
+    showMessage();
+
+    emailjs.sendForm( 'service_119efii', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
+      .then( ( result ) =>
+      {
+        console.log( result.text );
+
+      }, ( error ) =>
+      {
+        console.log( error.text );
+      } );
+    e.target.reset();
+  }
+  const data = useStaticQuery( graphql`
     query {
       file(relativePath: { eq: "PrivateClass3.png" }) {
         childImageSharp {
@@ -488,59 +496,59 @@ export function ContactFormFunction()
   `)
 
 
-    return (
-      <>
-        <SuccessWraper id="sucess-container">
-          
-          <SucessContainer >
-            <PricingzFluidContainer>
-              <Img fluid={ data.file.childImageSharp.fluid } alt="" />
-              </PricingzFluidContainer>
-              <TitleForm id="titlesent">Parabens! Em breve te enviaremos um mail.</TitleForm>
-            </SucessContainer>
-          </SuccessWraper>
-        
+  return (
+    <>
+      <SuccessWraper id="sucess-container">
 
-        
-        <ContactForm onSubmit={ sendEmail } id="form-container" vanish={vanished}>
-          <OfferHolder>
+        <SucessContainer >
+          <PricingzFluidContainer>
+            <Img fluid={ data.file.childImageSharp.fluid } alt="" />
+          </PricingzFluidContainer>
+          <TitleForm id="titlesent">Parabens! Em breve te enviaremos um mail.</TitleForm>
+        </SucessContainer>
+      </SuccessWraper>
+
+
+
+      <ContactForm onSubmit={ sendEmail } id="form-container" vanish={ vanished }>
+        <OfferHolder>
           <TitleOffer>Oferta Limitada - 50% OFF</TitleOffer>
-          </OfferHolder>
-          <FormHolder>
-       
-            
+        </OfferHolder>
+        <FormHolder>
+
+
           <ContactLabel>NOME</ContactLabel>
           <ContactInput type="text" name="user_name" placeholder="Escreva o seu nome aqui" />
           <ContactLabel>EMAIL</ContactLabel>
-          <ContactInput type="email" name="user_email" placeholder="Escreva o seu email aqui" id="email_input"  />
+          <ContactInput type="email" name="user_email" placeholder="Escreva o seu email aqui" id="email_input" />
           <div>
 
           </div>
           <ContactLabel>PAÍS DE RESIDÊNCIA</ContactLabel>
           <ContactInterest name="interest" id="c-form-profession">
-                                       <InterestOption value="Brasil">Brasil</InterestOption>
-                           <InterestOption value="Argentina">Argentina</InterestOption>
+            <InterestOption value="Brasil">Brasil</InterestOption>
+            <InterestOption value="Argentina">Argentina</InterestOption>
 
 
-        </ContactInterest>
+          </ContactInterest>
           {/* <ContactLabel>COMENTÁRIOS (OPCIONAL)</ContactLabel>
                         <MessageInput rows="2" type="comments" name="comments" /> */}
           <InputHolder>
-          <input type="checkbox" id="checkboxid" click={ click } onClick={ handleCheckChange } />
-          <Terms>Eu tenho máis de 18 anos e vou prender a minha camara nas aulas.</Terms>
+            <input type="checkbox" id="checkboxid" click={ click } onClick={ handleCheckChange } />
+            <Terms>Eu tenho máis de 18 anos e vou prender a minha camara nas aulas.</Terms>
           </InputHolder>
-        
-            <ButtonCenter name="submit" type="submit" value="Submit" click={ click }>SOLICITAR INFORMACÃO</ButtonCenter>
-            </FormHolder>
+
+          <ButtonCenter name="submit" type="submit" value="Submit" click={ click }>SOLICITAR INFORMACÃO</ButtonCenter>
+        </FormHolder>
 
 
 
 
-        </ContactForm>
+      </ContactForm>
 
-      
-      </>
-    )
-    
-  }
+
+    </>
+  )
+
+}
 
