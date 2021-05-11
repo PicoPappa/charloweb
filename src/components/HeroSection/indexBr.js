@@ -39,7 +39,7 @@ export default function HeroSection ()
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "logo3.png" }) {
+      file(relativePath: { eq: "logo8.png" }) {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels

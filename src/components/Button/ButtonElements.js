@@ -33,9 +33,8 @@ export const ButtonWhite = styled.a`
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  background: linear-gradient(90deg,rgb(80, 129, 232) 0%,rgb(52, 101, 194) 100%);
-  box-shadow:0 6px 2px rgba(0,0,0,0.3);
-  border:1px solid rgba(0,0,0,0.1);
+
+  border:2px solid rgba(255, 255, 255, 1);
   color: white;
   font-weight: 700;
   justify-content:center;

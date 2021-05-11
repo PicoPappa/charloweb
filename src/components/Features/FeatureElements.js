@@ -218,7 +218,7 @@ margin-bottom:16px;
 export const FluidContainer = styled.div`
 width:60%;
 height:auto !important;
-  -webkit-filter: drop-shadow(0px 8px 6px rgba(29,28,53,0.6));
+  -webkit-filter: drop-shadow(rgba(255, 255, 253, 0.1) 0px 3px 6px);
 
     transition: 0.8s all ease;
     margin-bottom:62px;
