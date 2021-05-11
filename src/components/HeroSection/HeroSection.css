@@ -36,7 +36,7 @@
 
 .hero-container > p {
   margin-top: 16px;
-  color: #adaecd;
+  color: white;
   font-size: 16px;
   width: 400px;
 }
@@ -58,7 +58,7 @@
 
 .hero-container > ul {
   margin-top: 26px;
-  color: #d6daff;
+  color: white;
   font-size: 16px;
   line-height: 16px;
   list-style: none;
