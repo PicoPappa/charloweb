@@ -2,13 +2,25 @@ import styled from "styled-components"
 import { AiFillStar,AiOutlineSchedule, AiFillMessage } from "react-icons/ai"
 import { RiStethoscopeLine} from "react-icons/ri"
 
+export const FeaturesSuperGod = styled.div`
+    transform: skewY(-8deg);
+background:#201f2f;
+`
+
 export const FeaturesGod = styled.div`
   width: 100%;
   max-width: 1000px;
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding-top:140px;
+  margin-bottom:140px;
+      transform: skewY(8deg);
+
+  padding-top:90px;
+    @media screen and (max-width:690px){
+    padding-top:120px;
+    margin-bottom:0;
+    }
 `
 
 export const ImageContainer = styled.div`
@@ -189,7 +201,7 @@ align-self:center;
 margin-left:auto;
 margin-right:auto;
 width:0px;
-
+z-index:6;
 height:0px;
 position:relative;
 transition: 0.8s all ease;
@@ -206,7 +218,7 @@ margin-bottom:16px;
 export const FluidContainer = styled.div`
 width:60%;
 height:auto !important;
-  -webkit-filter: drop-shadow(0px 0px 10px rgba(29,28,53,0.4));
+  -webkit-filter: drop-shadow(0px 8px 6px rgba(29,28,53,0.6));
 
     transition: 0.8s all ease;
     margin-bottom:62px;
@@ -249,7 +261,8 @@ position:relative;
 
 border-radius:500px;
 transition: 0.8s all ease;
-background: linear-gradient(rgba(75,78,165,1) 0%, rgba(92, 134, 249,1) 0%, rgba(108, 48, 219,1) 100%);
+background: linear-gradient(rgb(89, 220, 255) 0%,rgb(92, 141, 249) 0%,rgb(42, 91, 179) 100%);
+
 
 
 @media screen and (max-width: 960px) {
@@ -297,7 +310,7 @@ width: 300px;
     -webkit-transition: 0.8s all ease;
     transition: 0.8s all ease;
     
-    background: linear-gradient(rgba(75,78,165,1) 0%,rgba(92,134,249,1) 0%,rgba(108,48,219,1) 100%);
+    background:#201F2F;
        @media screen and (max-width: 490px) {
     width:200px;
     height:200px;
@@ -344,6 +357,7 @@ align-self:center;
 justify-content:center;
 justify-self:center;
     transition: 0.8s all ease;
+    z-index:6;
 
 @media screen and (max-width: 960px) {
     width:180px;
@@ -434,24 +448,24 @@ align-items: left;
 
 export const Icon1 = styled( AiFillStar )`
 align-items: left;
-color:#6775FF;
+color:rgb(65, 141, 255);;
 font-size:40px;
 `
 
 export const Icon3 = styled( AiOutlineSchedule )`
 align-items: left;
-color:#6775FF;
+color:rgb(65, 141, 255);;
 font-size:40px;
 `
 export const Icon2 = styled( RiStethoscopeLine )`
 align-items: left;
-color:#6775FF;
+color:rgb(65, 141, 255);
 font-size:40px;
 `
 
 export const Icon4 = styled( AiFillMessage )`
 align-items: left;
-color:#6775FF;
+color:rgb(65, 141, 255);
 font-size:40px;
 `
 

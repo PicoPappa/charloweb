@@ -9,28 +9,31 @@ export const StaffGod = styled.div`
   max-width: 900px;
   justify-content: center;
   align-items: center;
-  margin: 200px auto auto auto;
+margin-left:auto;
+margin-right:auto;
+    transform: skewY(8deg);
+
 /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
   background: linear-gradient(135deg, rgba(25, 21, 35 ,1) 0%, rgba(44, 44, 89,1) 0%, rgba(89, 75, 145,1) 100%); */
   `
 
 export const CertifyIcon = styled( AiFillSafetyCertificate )`
 align-items: center;
-color:#6775FF;
+color:white;
 font-size:40px;
 margin-bottom:10px;
 `
 
 export const NativeIcon = styled( BiWorld )`
 align-items: center;
-color:#6775FF;
+color:white;
 font-size:40px;
 margin-bottom:10px;
 `
 
 export const SpecializedIcon = styled( RiFocus2Fill )`
 align-items: center;
-color:#6775FF;
+color:white;
 font-size:40px;
 margin-bottom:10px;
 `
@@ -93,6 +96,10 @@ color: white;
     font-size:16px;
   }
 `
+export const H6White = styled.h6`
+color:white;
+`
+
 
 export const DataSubtitleStaff = styled.h4`
 font-size: 16px;

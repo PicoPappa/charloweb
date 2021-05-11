@@ -84,9 +84,10 @@ export default function NeedsSection ()
       }
     }
   `)
-    return (
+  return (
+              <a id="levels">
       <SectionGod ref={ ref }>
-        <a id="journeyAnchor">
+
           
             
           
@@ -95,7 +96,6 @@ export default function NeedsSection ()
                    
           <div>
                     <FeaturesContainer className="title">
-                            <h6>NÍVEIS</h6>
                             <h3>Aulas para</h3>
                     <h2>Todos os níveis</h2>
                     <h5>Não importa se você é um iniciante ou se está no meio do caminho.
@@ -116,10 +116,7 @@ Nós o preparamos para fazer os exames que permitirão que você trabalhe em tod
                     </DataHolder>
                     
           </FeaturesContainer>
-          <ButtonHolder>
-                     <ModalButton></ModalButton>
 
-                    </ButtonHolder>
           </div>
                     <JourneyFluidContainerLevels >
                             <Img fluid={ data.file.childImageSharp.fluid } alt="" className="pic"   />
@@ -129,8 +126,9 @@ Nós o preparamos para fazer os exames que permitirão que você trabalhe em tod
               <Img fluid={ data.file.childImageSharp.fluid } alt="" />
             </CircleJourneyFluidContainerLevels>
 
-            </a>
-        </SectionGod>
+            
+      </SectionGod>
+      </a>
             
             
   

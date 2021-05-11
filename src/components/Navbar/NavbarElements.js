@@ -127,9 +127,9 @@ text-align:center;
     pointer-events:${( { click } ) => ( click ? "auto" : "none" )};
     opacity:1;
     transition:all 0.8s ease;
-    background: rgb(75,78,165);
+    background: #201F2F;
     box-shadow: -10px 0 10px rgba(0,0,0,0.4);
-    background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(59, 62, 132,1) 100%);
+    background: #201F2F;
 }
 `
 

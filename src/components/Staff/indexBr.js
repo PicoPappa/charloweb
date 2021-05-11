@@ -3,11 +3,13 @@ import { ButtonHolderStaff } from "../Button/ButtonElements"
 
 import Img from "gatsby-image"
 import { StaffFluidContainer } from "../Features/FeatureElements"
-import { StaffGod,StaffContainer, DataSubtitleStaff, DataTitleStaff, DataWrapStaff, StaffInfo, StaffInfoWidth,ThreeColumnsStaff, CertifyIcon, NativeIcon, SpecializedIcon } from "./StaffElements"
+import { StaffGod,StaffContainer, DataSubtitleStaff, DataTitleStaff, DataWrapStaff, StaffInfo, StaffInfoWidth,ThreeColumnsStaff, CertifyIcon, NativeIcon, SpecializedIcon, H6White } from "./StaffElements"
 import ModalButton from "../Button/Button"
 import { useStaticQuery, graphql } from "gatsby"
 import { gsap, ScrollTrigger } from "gsap/all";
 import ModalButtonBr from "../Button/ButtonBr"
+import { DescriptionWhite, PricingSuperGod, JourneySuperGod } from "../Pricing/PricingElements"
+import ModalButtonBrWhite from "../Button/ButtonBrWhite"
 
 
 
@@ -76,14 +78,14 @@ function StaffSectionBr (){
     }
   `)
 
-    return (
+  return (
+      <JourneySuperGod>
         <StaffGod ref={ref}>
             <a id="about-us">
                     
                 <StaffContainer>
             <StaffInfo className="title">
               
-                            <h6>TUTORES</h6>
                             <h3>Aprenda com</h3>
                         <h2>os melhores #1</h2>
                         
@@ -91,7 +93,7 @@ function StaffSectionBr (){
                         <Img fluid={ data.file.childImageSharp.fluid } alt="group of teachers on a classroom" />
                 </StaffFluidContainer>
                 <StaffInfoWidth>
-                        <h5>Somos uma escola moderna feita para alunos modernos com mais de  <b>15 anos de experiência</b>. Nossos professores são <b>falantes nativos da Argentina</b> totalmente preparados para ajudá-lo a descobrir um novo mundo de forma eficaz e confortável. Atribuiremos a você um <b>professor especializado</b> que atenda às suas necessidades e o ajude a alcançar seus objetivos. Cada professor é <b>totalmente certificado</b>.</h5>
+                        <DescriptionWhite>Somos uma escola moderna feita para alunos modernos com mais de  <b>15 anos de experiência</b>. Nossos professores são <b>falantes nativos da Argentina</b> totalmente preparados para ajudá-lo a descobrir um novo mundo de forma eficaz e confortável. Atribuiremos a você um <b>professor especializado</b> que atenda às suas necessidades e o ajude a alcançar seus objetivos. Cada professor é <b>totalmente certificado</b>.</DescriptionWhite>
                         </StaffInfoWidth>
                         </StaffInfo>
                         
@@ -112,14 +114,11 @@ Certificado</DataSubtitleStaff>
                         </DataWrapStaff>
                        
                     </ThreeColumnsStaff>
-                    <ButtonHolderStaff>
-                     <ModalButtonBr>Try 1-on-1 class free</ModalButtonBr>
-                    </ButtonHolderStaff>
                     </StaffContainer>
                     
             </a>
         </StaffGod>
-            
+            </JourneySuperGod>
             
   
         

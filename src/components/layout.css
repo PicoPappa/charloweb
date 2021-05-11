@@ -1,11 +1,6 @@
 html {
   scroll-behavior: smooth;
-  background: rgb(33, 35, 78);
-  background: linear-gradient(
-    rgba(33, 35, 78, 1) 0%,
-    rgb(20, 18, 29) 35%,
-    rgb(46, 45, 68) 100%
-  );
+  background: #201f2f;
 }
 * {
   box-sizing: border-box;
@@ -19,12 +14,17 @@ a {
   font-size: 14px;
 }
 
+img {
+  border-radius: 0;
+}
+
 Img {
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
+  border-radius: 0;
 }
 
 b {
@@ -32,13 +32,13 @@ b {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   color: white;
   transition: 0.8s all ease;
 }
 h2 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   color: white;
 }
@@ -62,7 +62,7 @@ textarea {
 }
 
 h3 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 400;
   color: white;
   transition: 0.8s all ease;
@@ -94,7 +94,7 @@ h5 {
 h6 {
   font-size: 14px;
   font-weight: 700;
-  color: #6775ff;
+  color: rgb(65, 141, 255);
   margin-bottom: 10px;
   transition: 0.8s all ease;
 }
@@ -125,16 +125,23 @@ radio-button {
   h2,
   h3,
   h1 {
-    font-size: 32px;
+    font-size: 24px;
     justify-content: center;
     text-align: center;
     align-self: center;
     align-items: center;
   }
+  h4 {
+    font-size: 16px;
+  }
+
   h6 {
     justify-content: center;
     text-align: center;
     align-self: center;
     align-items: center;
+  }
+  html {
+    background: #201f2f;
   }
 }

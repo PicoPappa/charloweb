@@ -25,6 +25,33 @@ export const Button = styled.a`
 }
 `
 
+export const ButtonWhite = styled.a`
+    transition: 0.8s all ease;
+  padding: 15px 60px;
+  border-radius: 60px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  background: linear-gradient(90deg,rgb(80, 129, 232) 0%,rgb(52, 101, 194) 100%);
+  box-shadow:0 6px 2px rgba(0,0,0,0.3);
+  border:1px solid rgba(0,0,0,0.1);
+  color: white;
+  font-weight: 700;
+  justify-content:center;
+  align-items:center;
+  
+  &:hover{
+        /* background: linear-gradient(90deg, rgba(123,67,255,1)  0%, rgba(223,79,180,1) 100%); */
+        box-shadow: 0px 7px 4px rgba(0,0,0,0.3);
+        transform: translatey(-10%);
+        transition:all 0.4s ease;
+    }
+  @media screen and (max-width:690px){
+  display:none;
+}
+`
+
 export const ButtonStaff = styled.button`
     transition: 0.8s all ease;
   padding: 15px 30px;
@@ -88,7 +115,7 @@ export const ButtonCenter = styled.button`
   background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%);
   color: white;
   font-weight: 700;
-  margin-top:46px;
+  margin-top:16px;
       color:${( { click } ) => ( click ? "white" : "#998faa" )};
     background:${( { click } ) => ( click ? "background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%)" : "#554e63" )};
     pointer-events:${( { click } ) => ( click ? "auto":"none")}; 
@@ -105,12 +132,6 @@ export const ButtonCenter = styled.button`
 }
 @media screen and (max-width: 904px) {
   font-size:12px;
-}
-@media screen and (max-width: 346px) {
-  font-size:11px;
-}
-@media screen and (max-width: 320px) {
-  font-size:9px;
 }
 `
 
@@ -200,6 +221,7 @@ flex-direction:column;
 row-gap:16px;
 justify-content:center;
 @media screen and (max-width: 960px) {
+  display:none;
   flex-direction:column;
   align-items:center;
   justify-content:center;
@@ -212,6 +234,8 @@ justify-content:center;
   background-color:#14121E;
   box-shadow:0px -5px 20px rgba(20, 18, 30,0.2);
 position: fixed;
+  display:none;
+
 bottom:0;
 left:0;
   width:100vw;

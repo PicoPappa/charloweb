@@ -49,12 +49,16 @@ const [ click, setClick ] = useState( false )
                                 {/* <NavItem>
                                     <NavLinks href="#journey">Experience</NavLinks>
                                 </NavItem> */}
-                                <NavItem>
-                                    <NavLinks href="#pricing">Preços</NavLinks>
-                                </NavItem>
+
                                 <NavItem>
                                     <NavLinks href="#about-us">Sobre nós</NavLinks>
                             </NavItem>
+                                                             <NavItem>
+                                    <NavLinks href="#levels">Níveis</NavLinks>
+                            </NavItem>
+                                                            <NavItem>
+                                    <NavLinks href="#pricing">Reserve sua Aula</NavLinks>
+                                </NavItem>
                             
                             </NavMenu>
                         

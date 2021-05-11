@@ -130,7 +130,7 @@ const CloseModalButton = styled( MdClose )`
 `;
 
 export const ContactForm = styled.form`
-  width: 90%;
+  width: 80%;
   justify-content: center;
   align-items: left;
   display:flex;
@@ -140,27 +140,31 @@ export const ContactForm = styled.form`
     padding-bottom: 46px;
   margin-right:0;
   margin-left:auto;
+  border-radius:10px;
   box-shadow:0px 5px 10px rgba(0,0,0,0.6);
   margin-top:auto;
-  border-radius:10px;
   display:${ ( { vanished } ) => ( vanished ? "none" : "flex" ) };
   /* left:${ ( { click } ) => ( click ? "0" : "-1000px" ) }; */
 
 
-  background: linear-gradient(180deg,  rgb(56, 54, 81,1) 0%, rgba(34, 28, 43,1) 100%);
+  background: white;
   @media screen and (max-width: 690px) {
   margin:auto;
   margin-top:32px;
   width:100%;
+    border-radius:0;
+        transform: skewY(-8deg);
+
+
   }
 `
 
 
 export const FormHolder = styled.div`
   padding-top:20px;
-      padding-right: 46px;
-      padding-left: 46px;
-        width: 90%;
+      padding-right: 26px;
+      padding-left: 26px;
+        width: 100%;
         justify-content: center;
   align-items: left;
   display:flex;
@@ -169,20 +173,22 @@ export const FormHolder = styled.div`
   margin-right:auto;
   margin-left:auto;
   margin-top:auto;
-  border-radius:10px;
   @media screen and (max-width: 690px) {
   margin:auto;
+        transform: skewY(8deg);
 
   width:100%;
   }
   @media screen and (max-width: 390px) {
   padding-left:26px;
   padding-right:26px;
+  padding-top:56px;
+  padding-bottom:26px;
   }
   `
 
 export const ContactLabel = styled.label`
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left:0px;
   display:flex;
   flex-direction: column;
@@ -190,8 +196,8 @@ export const ContactLabel = styled.label`
   align-items: left;
   font-size: 10px;
   line-height:16px;
-  font-weight: 400;
-  color: #d2d2d4;
+  font-weight: 600;
+  color: #757479;
   
   `
 export const ContactInput = styled.input`
@@ -204,7 +210,7 @@ export const ContactInput = styled.input`
   text-align:left;
   padding-left:6%;
   background:white;
-
+  border:1px solid #e3e3ea;
   font-size: 12px;
   line-height:30px;
     border-radius:4px;
@@ -242,11 +248,12 @@ export const MessageInput = styled.textarea`
   `
 
 const TitleForm = styled.h2`
-  color:white;
+  color:#676f86;
   font-size:20px;
-  width:250px;
+  width:100%;
 margin:auto;
-
+margin-top:16px;
+margin-bottom:10px;
   text-align:center;
   justify-content: center;
   align-items: center;
@@ -256,10 +263,35 @@ margin:auto;
     font-size:16px;
     justify-self:center;
     align-self:center;
-    width:100%;
+    width:90%;
     }
   
   `
+
+  const TitleSent = styled.h2`
+  color:white;
+  font-size:16px;
+  width:70%;
+margin:auto;
+margin-top:16px;
+margin-bottom:10px;
+font-weight:500;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  align-self:center;
+  justify-self:center;
+      @media screen and (max-width: 820px) {
+    font-size:16px;
+    justify-self:center;
+    align-self:center;
+    width:80%;
+    margin-top:0;
+    font-weight:500;
+    }
+  
+  `
+
 const SuccessWraper = styled.div`
 
 margin:auto;
@@ -302,6 +334,7 @@ export const TitleOffer = styled.h5`
   color:white;
   font-size:14px;
   font-weight:600;
+  line-height:16px;
   justify-self:center;
   text-align:center;
   margin:auto;
@@ -322,9 +355,9 @@ export const ContactInterest = styled.select`
   line-height:30px;
   font-weight: 600;
   background:transparent;
-  color: white;
+  color: #312d44;
   border-radius:4px;
-  border:1px solid #b2b2b2;
+  border:1px solid #e3e3ea;
   ::placeholder{
 font-weight:300;
     font-style:italic;
@@ -386,7 +419,7 @@ display:none;
 
 export const SentText = styled.p`
 font-size:16px;
-color:#141414;
+color:white;
 `
 
 export const InputHolder = styled.div`
@@ -396,17 +429,18 @@ color:#d2d2d4;
 display:flex;
 flex-direction:row;
 justify-content:center;
-align-items:center;
+align-items:left;
 column-gap:8px;
 `
 
 export const Terms = styled.p`
 font-size:12px;
-color:#d2d2d4;
+color:#88888c;
 font-weight:600;
 `
 
 export const OfferHolder = styled.div`
+display:flex;
 background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%);
 border-top-left-radius:10px;
 border-top-right-radius:10px;
@@ -422,7 +456,7 @@ export function ContactFormFunction ()
 
   const [ vanished, setVanished ] = React.useState( false );
 
-  const [ click, setClick ] = React.useState( false );
+  const [ click, setClick ] = React.useState( true );
   const [ disabled, setDisabled ] = React.useState( false );
 
 
@@ -504,27 +538,26 @@ export function ContactFormFunction ()
           <PricingzFluidContainer>
             <Img fluid={ data.file.childImageSharp.fluid } alt="" />
           </PricingzFluidContainer>
-          <TitleForm id="titlesent">Parabens! Em breve te enviaremos um mail.</TitleForm>
+          <TitleSent id="titlesent">Parabens! Em breve te enviaremos um mail.</TitleSent>
         </SucessContainer>
       </SuccessWraper>
 
 
 
       <ContactForm onSubmit={ sendEmail } id="form-container" vanish={ vanished }>
-        <OfferHolder>
-          <TitleOffer>Oferta Limitada - 50% OFF</TitleOffer>
-        </OfferHolder>
         <FormHolder>
 
+          <TitleForm>Contacte-nos e comence a aprender espanhol!</TitleForm>
 
-          <ContactLabel>NOME</ContactLabel>
+
+          <ContactLabel>Nome *</ContactLabel>
           <ContactInput type="text" name="user_name" placeholder="Escreva o seu nome aqui" />
-          <ContactLabel>EMAIL</ContactLabel>
-          <ContactInput type="email" name="user_email" placeholder="Escreva o seu email aqui" id="email_input" />
+          <ContactLabel>Correio Electrónico *</ContactLabel>
+          <ContactInput type="email" name="user_email" placeholder="Escreva o seu correio aqui" id="email_input" />
           <div>
 
           </div>
-          <ContactLabel>PAÍS DE RESIDÊNCIA</ContactLabel>
+          <ContactLabel>País de Residência *</ContactLabel>
           <ContactInterest name="interest" id="c-form-profession">
             <InterestOption value="Brasil">Brasil</InterestOption>
             <InterestOption value="Argentina">Argentina</InterestOption>
@@ -534,11 +567,11 @@ export function ContactFormFunction ()
           {/* <ContactLabel>COMENTÁRIOS (OPCIONAL)</ContactLabel>
                         <MessageInput rows="2" type="comments" name="comments" /> */}
           <InputHolder>
-            <input type="checkbox" id="checkboxid" click={ click } onClick={ handleCheckChange } />
-            <Terms>Eu tenho máis de 18 anos e vou prender a minha camara nas aulas.</Terms>
+            <input type="checkbox" id="checkboxid" click={ click } onClick={ handleCheckChange } defaultChecked="true" />
+            <Terms>Eu tenho máis de 18 anos.</Terms>
           </InputHolder>
 
-          <ButtonCenter name="submit" type="submit" value="Submit" click={ click }>SOLICITAR INFORMACÃO</ButtonCenter>
+          <ButtonCenter name="submit" type="submit" value="Submit" click={ click }>Enviar</ButtonCenter>
         </FormHolder>
 
 

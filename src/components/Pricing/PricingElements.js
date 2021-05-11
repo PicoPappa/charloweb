@@ -1,5 +1,41 @@
 import styled from "styled-components"
+import { BsPeopleCircle } from "react-icons/bs"
+import {BsFillCameraVideoFill} from "react-icons/bs"
 
+export const JourneySuperGod = styled.div`
+width:100%;
+  box-shadow:0px 10px 20px rgba(0,0,0,0.6);
+  padding-top:80px;
+  padding-bottom:50px;
+  z-index:5;
+    background: linear-gradient(180deg,rgb(78, 143, 241) 0%,rgb(53, 98, 165) 100%);
+    	transform: skewY(-8deg);
+      margin-top:100px;
+      padding-bottom:100px;
+
+         @media screen and (max-width: 690px) {
+        padding-top:50px;
+        margin-top:50px;
+        padding-bottom:50px;
+        }
+
+`
+
+export const PricingSuperGod = styled.div`
+width:100%;
+  box-shadow:0px 10px 20px rgba(0,0,0,0.6);
+  padding-top:50px;
+  padding-bottom:50px;
+  z-index:5;
+    background: linear-gradient(180deg,rgb(78, 143, 241) 0%,rgb(53, 98, 165) 100%);
+    	transform: skewY(-8deg);
+
+         @media screen and (max-width: 690px) {
+        padding-top:20px;
+        padding-bottom:0;
+        }
+
+`
 
 export const PlanContainer = styled.div`
   width: 100%;
@@ -23,8 +59,16 @@ export const PricingContainer = styled.div`
     text-align: left;
     margin:auto;
      @media screen and (max-width: 690px) {
+       margin-bottom:26px;
+       padding-left:8px;
+       padding-right:8px;
      text-align:center;
     }
+
+`
+
+export const DescriptionWhite = styled.h5`
+color:white;
 
 `
 
@@ -73,7 +117,7 @@ export const GradientTittle = styled.h2`
   
   background: linear-gradient(to right, #4274ff 15%, #42adff 30%, #42adff 60%, #4274ff 75%);
   background-size: 200% auto;
-  
+  font-size:70px;
   color: white;
   background-clip: text;
   text-fill-color: transparent;
@@ -94,17 +138,15 @@ margin-left:0;
 display:grid;
 grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
 color:white;
-  background: linear-gradient(180deg,  rgb(56, 54, 81,1) 0%, rgba(34, 28, 43,1) 100%);
 
 padding:32px;
-padding-left:42px;
-box-shadow:0 5px 2px rgba(0,0,0,0.4);
+padding-left:0;
+padding-right:0;
 border-radius:4px;
 row-gap:32px;
 /* column-gap:90px; */
 width:96%;
      @media screen and (max-width: 690px) {
-     background:rgb(56, 54, 81,1);
      }
      @media screen and (max-width: 390px) {
      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
@@ -116,6 +158,9 @@ export const ClassFt = styled.div`
 display:flex;
 flex-direction:column;
 row-gap:6px;
+width:80px;
+align-items:center;
+justify-content:center;
 `
 
 export const ClassFtGrid = styled.div`
@@ -127,9 +172,9 @@ row-gap:6px;
 `
 
 export const FtTitle = styled.h6`
-font-size:10px;
+font-size:20px;
 color:white;
-font-weight:400;
+font-weight:600;
 margin:0;
 `
 export const FtDescription = styled.h6`
@@ -194,4 +239,25 @@ border-radius:30px;
 background-color:#6775FF;
 position:absolute;
 transform:translateX(-6%);
+`
+export const PriceGiant = styled.div`
+margin-top:30px;
+justify-content:center;
+`
+
+export const GiantTitle = styled.h2`
+font-size:50px;
+font-weight:600;
+`
+
+export const IconPrivate = styled( BsPeopleCircle )`
+font-size:20px;
+color:white;
+`
+
+
+
+export const IconCamera = styled( BsFillCameraVideoFill )`
+font-size:20px;
+color:white;
 `

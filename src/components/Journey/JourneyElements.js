@@ -10,10 +10,12 @@ export const SectionGod = styled.div`
   max-width: 1000px;
   justify-content: center;
   align-items: center;
-  margin: 200px auto auto auto;
+  margin: 100px auto auto auto;
   
   @media screen and (max-width: 690px) {
   width:90%;
+    margin: 80px auto auto auto;
+
   }
   `
 
@@ -26,18 +28,25 @@ export const SectionGod = styled.div`
   justify-items:center;
   align-items: center;
   align-content:center;
-  margin: 200px auto auto auto;
-  box-shadow:0px 10px 20px rgba(0,0,0,0.6);
+  margin-left:auto;
+  z-index:5;
+  margin-right:auto;
     height:100%;
   border-radius:10px;
-  background: linear-gradient(180deg,  rgb(56, 54, 81,1) 0%, rgba(34, 28, 43,1) 100%);
   padding:50px;
+  	transform: skewY(8deg);
+
   @media screen and (max-width: 690px) {
-    padding:16px;
+    padding:0;
     padding-top:32px;
     display:flex;
     flex-direction:column;
-  width:90%;
+  margin: 0;
+  border-radius:0;
+  margin-top:40px;
+    z-index:5;
+
+
   }
   `
 
@@ -62,7 +71,7 @@ column-gap:16px;
 export const DataIcon1 = styled(RiChatCheckFill)`
 font-size: 30px;
 font-weight: 600;
-color: #6775FF;
+color: rgb(65, 141, 255);
 margin-top:auto;
 margin-bottom:auto;
   @media screen and (max-width: 690px) {
@@ -74,7 +83,7 @@ margin-bottom:auto;
 export const DataIcon2 = styled(CgFileDocument)`
 font-size: 30px;
 font-weight: 600;
-color: #6775FF;
+color: rgb(65, 141, 255);
 margin-top:auto;
 margin-bottom:auto;
   @media screen and (max-width: 690px) {
@@ -85,8 +94,8 @@ margin-bottom:auto;
 export const DataIcon3 = styled(GiSoccerBall)`
 font-size: 30px;
 font-weight: 600;
-color: #6775FF;
-stroke:#6775FF;
+color: rgb(65, 141, 255);
+stroke:rgb(65, 141, 255);
 margin-top:auto;
 margin-bottom:auto;
   @media screen and (max-width: 690px) {
@@ -96,8 +105,8 @@ margin-bottom:auto;
 export const DataIcon4 = styled(GiWeightLiftingUp)`
 font-size: 30px;
 font-weight: 600;
-color: #6775FF;
-stroke:#6775FF;
+color: rgb(65, 141, 255);
+stroke:rgb(65, 141, 255);
 margin-top:auto;
 margin-bottom:auto;
   @media screen and (max-width: 690px) {

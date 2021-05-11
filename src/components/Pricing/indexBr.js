@@ -1,11 +1,12 @@
 import React, {useRef,useEffect} from "react"
 import { Button, ButtonHolderCenter } from "../Button/ButtonElements"
 import { AiFillStar} from "react-icons/ai"
-
 import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
+
 import { TwoColumnsWrap, ThreeColumnsWrap, FeaturesContainer, FeaturesGrid, Feature, FeatureIcon, FeaturesGod, Icon1 } from "../Features/FeatureElements"
 import { SectionPricingGod, DataWrap, DataTitle, DataSubtitle } from "../Journey/JourneyElements"
-import { PlanContainer, PricingContainer, TwoColumnsPrice, ColumnClassLeft, ColumnClassRight, ClassFtContainer, ClassFt, ClassFtGrid, GradientOffer, GradientTittle, FtTitle,FtDescription, FtDescriptionMini, WrapperClassFt, GradientLine, OfferCircle } from "./PricingElements"
+import { PlanContainer, PricingContainer, TwoColumnsPrice, ColumnClassLeft, ColumnClassRight, ClassFtContainer, ClassFt, ClassFtGrid, GradientOffer, GradientTittle, FtTitle,FtDescription, FtDescriptionMini, WrapperClassFt, GradientLine, OfferCircle, PriceGiant, GiantTitle, PricingSuperGod, DescriptionWhite, IconPrivate, IconCamera } from "./PricingElements"
 import { gsap, ScrollTrigger } from "gsap/all";
 import ModalButton from "../Button/Button"
 import ModalButtonBr from "../Button/ButtonBr"
@@ -65,80 +66,63 @@ gsap.registerPlugin(ScrollTrigger);
     } );
   }, [] );
 
-    return (
+      const data = useStaticQuery(graphql`
+    query {
+      one: file(relativePath: { eq: "zoom.png" }) {
+        childImageSharp {
+          # Specify a fixed image and fragment.
+          # The default width is 400 pixels
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    
+
+      two: file(relativePath: { eq: "DuoClass.png" }) {
+        childImageSharp {
+          # Specify a fixed image and fragment.
+          # The default width is 400 pixels
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+
+
+  three: file(relativePath: { eq: "Headset.png" }) {
+        childImageSharp {
+          # Specify a fixed image and fragment.
+          # The default width is 400 pixels
+          fluid{
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+     <a id="pricing">
+      <PricingSuperGod>
         <SectionPricingGod ref={ref} >
-            <a id="pricing">
+           
                 
                     <PricingContainer className="text" >
                         
             {/* <GradientOffer>OFERTA</GradientOffer> */}
 
-                        <h3>Experimente sua</h3>
-                        <GradientTittle>aula de<br/>boas-vindas!</GradientTittle>
-            <h5> Escolher um curso que você goste e encontrar o melhor programa para você é uma tarefa importante. Aproveite nossa oferta única de boas-vindas para testar nossas aulas. 
-              <br/><br/>Esteja ciente de que você pode aceitar esta oferta apenas uma vez.</h5> 
-            {/* <h6>RECURSOS DE AULA</h6> */}
+                        <h3>Experimente</h3>
+            <h2>uma aula privada</h2>
             
-            <WrapperClassFt>
-            <GradientLine></GradientLine>
-            <ClassFtContainer>
-              <ClassFt>
-                <FtTitle>
-                  Modalidade
-                </FtTitle>
-                <FtDescription>
-                  online
-                </FtDescription>
-              </ClassFt>
+            <DescriptionWhite> Escolher um curso que você goste e encontrar o melhor programa para você é uma tarefa importante. Recomendamos primeiro testar uma aula de graça pela <b>metade do preço</b>.
+            
+              <br /><br />O curso é <b>individual</b>, você terá um professor dedicado só para você.
+<br/><br/>Esta aula está disponível apenas para residentes na <b>Argentina</b> e no <b>Brasil</b>.
+             </DescriptionWhite> 
+            {/* <h6>RECURSOS DE AULA</h6> */}
 
-              <ClassFt>
-                <FtTitle>
-                  Duração
-                </FtTitle>
-                <FtDescription>
-                  1 hora
-                </FtDescription>
-              </ClassFt>
-
-              <ClassFt>
-                <FtTitle>
-                  Plataforma
-                </FtTitle>
-                <FtDescription>
-                  Zoom
-                </FtDescription>
-              </ClassFt>
-
-                 <ClassFt>
-                <FtTitle>
-                    Preço
-                </FtTitle>
-                <FtDescription>
-                  R$27
-                </FtDescription>
-              </ClassFt>
-
-                <ClassFt>
-                <FtTitle>
-                    Requisitos
-                </FtTitle>
-  
-                  <FtDescription>
-                    nenhum
-                       </FtDescription>
-
-                
-              </ClassFt>
-
-             
-
-
-
-
-            </ClassFtContainer>
-                    
-                </WrapperClassFt>
-                        
           </PricingContainer>
           
            
@@ -147,11 +131,12 @@ gsap.registerPlugin(ScrollTrigger);
                             <ModalButtonBr>Try 1-on-1 class free</ModalButtonBr>
                          </ButtonHolderCenter> */}
                     
-        </a>
+        
         <ContactFormFunction className="plans"/>
             
         </SectionPricingGod>
-            
+      </PricingSuperGod>
+      </a>
             
   
         

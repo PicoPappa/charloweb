@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from "react"
 import {ButtonHolder } from "../Button/ButtonElements"
 import Img from "gatsby-image"
-import { TwoColumnsWrapFeatures, FeaturesContainer, FeaturesCircleContainer, FeaturesGrid, Feature, FeatureIcon, FeaturesGod, Icon1, FeatureDescription, Icon2, Icon3, Icon4 , ImageContainer, FeaturesFluidContainer} from "./FeatureElements"
+import { TwoColumnsWrapFeatures, FeaturesContainer, FeaturesCircleContainer, FeaturesGrid, Feature, FeatureIcon, FeaturesGod, Icon1, FeatureDescription, Icon2, Icon3, Icon4 , ImageContainer, FeaturesFluidContainer, FeaturesSuperGod} from "./FeatureElements"
 import { useStaticQuery, graphql } from "gatsby"
 import ModalButton from "../Button/Button"
 import { gsap, ScrollTrigger } from "gsap/all";
@@ -89,7 +89,8 @@ function FeaturesSectionBr (){
       }
     }
   `)
-            return (
+  return (
+              <FeaturesSuperGod>
               <FeaturesGod ref={ref}>
                 <a id="features">    
                   <TwoColumnsWrapFeatures>
@@ -105,7 +106,6 @@ function FeaturesSectionBr (){
 
                     <div>
                     <FeaturesContainer  className="title" >
-                            <h6>RECURSOS</h6>
                             <h3>O que você vai</h3>
                             <h2>conseguir de nós?</h2>
                                 <FeaturesGrid>
@@ -137,14 +137,11 @@ function FeaturesSectionBr (){
                     
                      
                     </FeaturesContainer>
-                 <ButtonHolder>
-                     <ModalButtonBr>Try 1-on-1 class free</ModalButtonBr>
-                    </ButtonHolder>
                     </div>
                 </TwoColumnsWrapFeatures>
                 </a>
               </FeaturesGod>
-              
+              </FeaturesSuperGod>
             
             
   
