@@ -55,7 +55,7 @@ export default function HeroSection ()
       
     <div className="hero-wrapper">
       <div className="videocontainer">
-        <div className="colorvideo"></div>
+        {/* <div className="colorvideo"></div> */}
       <video autoPlay loop muted id="video">
             <source src={backgroundVideo} type="video/webm"/>
         </video>

@@ -1,6 +1,12 @@
 html {
   scroll-behavior: smooth;
-  background: #201f2f;
+  background: linear-gradient(
+    180deg,
+    rgb(77, 141, 238) 0%,
+    rgb(77, 141, 238) 25%,
+    rgb(32, 31, 47) 25%,
+    rgb(32, 31, 47) 100%
+  );
 }
 * {
   box-sizing: border-box;
@@ -142,6 +148,11 @@ radio-button {
     align-items: center;
   }
   html {
-    background: #201f2f;
+    background: linear-gradient(
+      180deg,
+      #4d8dee 0%,
+      #4d8dee 10%#201f2f 11%,
+      #201f2f 100%
+    );
   }
 }
