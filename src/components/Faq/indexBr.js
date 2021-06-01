@@ -8,7 +8,7 @@ const AccordionSection = styled.div`
 display:flex;
 flex-direction:column;
 position:relative;
-width: 100%;
+width: 80%;
 max-width: 1000px;
 justify-content: center;
 align-items: left;
