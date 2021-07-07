@@ -105,7 +105,8 @@ export const ButtonMobile = styled.a`
 `
 
 export const ButtonCenter = styled.button`
-  padding: 15px 30px;
+display:flex;
+  padding: 15px 70px;
   border-radius: 40px;
   outline: none;
   border: none;
@@ -114,6 +115,12 @@ export const ButtonCenter = styled.button`
   background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%);
   color: white;
   font-weight: 700;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  margin:auto;
   margin-top:16px;
       color:${( { click } ) => ( click ? "white" : "#998faa" )};
     background:${( { click } ) => ( click ? "background: linear-gradient(90deg, rgba(75,78,165,1) 0%, rgba(66, 148, 255,1) 0%, rgba(123,67,255,1) 100%)" : "#554e63" )};

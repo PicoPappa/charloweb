@@ -14,6 +14,11 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.whatsappbut {
+  background: none;
+  border: none;
+}
+
 .container {
   margin-top: 56px;
   width: 100%;

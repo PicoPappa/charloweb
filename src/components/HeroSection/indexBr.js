@@ -14,6 +14,8 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import ModalButtonBrWhite from "../Button/ButtonBrWhite"
 
 
+
+
 const TickIcon = styled( TiTick )`
 font-size:20px;
 margin-right:10px;
@@ -74,7 +76,7 @@ export default function HeroSection ()
 
 
                     <ul>
-                        <li><TickIcon/>Amigável para iniciantes.</li>
+                        <li><TickIcon/>Amigável para iniciantes</li>
                         <li><TickIcon/>Professores nativos de Argentina</li>
                         <li><TickIcon/>Preços e qualidade #1</li>
                     </ul>

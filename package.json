@@ -44,6 +44,7 @@
     "react-spring": "^9.1.0",
     "react-swipeable": "^6.1.0",
     "react-visibility-sensor": "^5.1.1",
+    "react-whatsapp": "^0.2.1",
     "redux": "^4.0.5",
     "styled-components": "^5.2.3"
   },

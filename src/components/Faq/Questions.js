@@ -1,7 +1,7 @@
 export const Questions = [
         {
         q: "Qual é o preço da aula?",
-        a: "O preço da aula de boas-vindas é R$27. Depóis se você escolhe continuar, o preço é R$55."
+        a: "O preço da aula de boas-vindas é R$25. Depóis se você escolhe continuar, o preço é R$50."
     },
     {
         q: "Quando posso começar?",

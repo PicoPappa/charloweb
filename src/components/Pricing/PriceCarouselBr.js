@@ -10,9 +10,24 @@ import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons
 import { ButtonCenter } from "../Button/ButtonElements"
 import { MdClose } from "react-icons/md";
 import { AiFillCheckCircle } from "react-icons/ai"
+import {IoLogoWhatsapp} from "react-icons/io"
 import emailjs, { init } from 'emailjs-com';
 import DateTimePicker from 'react-datetime-picker/dist/entry.nostyle'
+import ReactWhatsapp from 'react-whatsapp';
 
+
+export const WaIcon = styled( IoLogoWhatsapp )`
+color:white;
+font-size:20px;
+margin-right: 5px;
+`
+
+export const FontBut = styled.h6`
+font-size: 14px;
+color:white;
+font-weight: 600;
+margin:0;
+`
 
 export const LeftIcon = styled( IoIosArrowDropleftCircle )`
 color:white;
@@ -455,7 +470,10 @@ export function ContactFormFunction ()
 {
 
   const [ vanished, setVanished ] = React.useState( false );
-
+  const [ nombre, setNombre ] = React.useState( "[inserte um nome]" );
+  const [ pais, setPais ] = React.useState( "Brasil" );
+  const [ interes, setInteres ] = React.useState( "Melhorar minha fluência" );
+  const [mensaje, setMensaje] =React.useState("Hola, estoy interesado en las clases de español.")
   const [ click, setClick ] = React.useState( true );
   const [ disabled, setDisabled ] = React.useState( false );
 
@@ -471,6 +489,30 @@ export function ContactFormFunction ()
 
 
   };
+
+const handleNameChange = ( event ) =>
+  {
+  setNombre( event.target.value );
+  handleWhatsappChange();
+  }
+
+  const handlePaisChange = ( event ) =>
+  {
+  setPais( event.target.value );
+  handleWhatsappChange();
+  }
+
+  const handleInteresChange = ( event ) =>
+  {
+  setInteres( event.target.value );
+  handleWhatsappChange();
+  }
+
+
+  const handleWhatsappChange = ( event ) =>
+  {
+   setMensaje("Oi! Meu nome é "+nombre+". Eu moro em "+pais+" e tenho interesse em fazer aulas de espanhol para "+interes.toLowerCase()+" de espanhol.")
+  }
 
   const handleVanishChange = ( event ) =>
   {
@@ -502,17 +544,7 @@ export function ContactFormFunction ()
   {
     console.log( "mandando mail" );
     e.preventDefault();
-    showMessage();
 
-    emailjs.sendForm( 'service_119efii', 'template_lb4myvm', e.target, 'user_pdhfAhtDDgmhwxYsFtMst' )
-      .then( ( result ) =>
-      {
-        console.log( result.text );
-
-      }, ( error ) =>
-      {
-        console.log( error.text );
-      } );
     e.target.reset();
   }
   const data = useStaticQuery( graphql`
@@ -551,18 +583,22 @@ export function ContactFormFunction ()
 
 
           <ContactLabel>Nome *</ContactLabel>
-          <ContactInput type="text" name="user_name" placeholder="Escreva o seu nome aqui" />
-          <ContactLabel>Correio Electrónico *</ContactLabel>
-          <ContactInput type="email" name="user_email" placeholder="Escreva o seu correio aqui" id="email_input" />
-          <div>
-
-          </div>
+          <ContactInput type="text" name="user_name" placeholder="Escreva o seu nome aqui" onChange={ handleNameChange } />
+          
+          
+          
           <ContactLabel>País de Residência *</ContactLabel>
-          <ContactInterest name="interest" id="c-form-profession">
+          <ContactInterest name="interest" id="c-form-profession" onChange={handlePaisChange}>
             <InterestOption value="Brasil">Brasil</InterestOption>
             <InterestOption value="Argentina">Argentina</InterestOption>
 
 
+          </ContactInterest>
+
+          <ContactLabel>Interesse *</ContactLabel>
+          <ContactInterest name="interest" id="c-form-profession">
+            <InterestOption value="Brasil">Melhorar minha fluência</InterestOption>
+            <InterestOption value="Argentina">Pasar um exame</InterestOption>
           </ContactInterest>
           {/* <ContactLabel>COMENTÁRIOS (OPCIONAL)</ContactLabel>
                         <MessageInput rows="2" type="comments" name="comments" /> */}
@@ -571,7 +607,14 @@ export function ContactFormFunction ()
             <Terms>Eu tenho máis de 18 anos.</Terms>
           </InputHolder>
 
-          <ButtonCenter name="submit" type="submit" value="Submit" click={ click }>Enviar</ButtonCenter>
+          <ReactWhatsapp number="+5491167429020" message={ mensaje } class="whatsappbut" disabled={ !click }>
+          <ButtonCenter name="submit" type="submit" value="Submit" click={ click }>
+            <WaIcon></WaIcon>
+              
+
+            <FontBut>Enviar Whatsapp</FontBut>
+            </ButtonCenter>
+            </ReactWhatsapp>
         </FormHolder>
 
 
