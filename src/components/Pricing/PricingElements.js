@@ -23,6 +23,7 @@ width:100%;
 
 export const PricingSuperGod = styled.div`
 width:100%;
+  box-shadow:0px 10px 20px rgba(0,0,0,0.6);
   padding-top:50px;
   padding-bottom:50px;
   z-index:5;
@@ -51,13 +52,11 @@ export const PricingContainer = styled.div`
   width:100%;
   max-width:700px;
   flex-direction: column;
-  justify-content: right;
-  align-items: right;
-  align-content:right;
-  margin-right: 0;
+  justify-content: center;
+  align-items: left;
   object-fit: contain;
   margin-top: -80px;
-    text-align: right;
+    text-align: left;
     margin:auto;
      @media screen and (max-width: 690px) {
        margin-bottom:26px;

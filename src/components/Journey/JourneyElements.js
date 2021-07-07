@@ -21,7 +21,8 @@ export const SectionGod = styled.div`
 
   export const SectionPricingGod = styled.div`
   width: 100%;
-  display:flex;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
   max-width: 1000px;
   justify-content: center;
   justify-items:center;

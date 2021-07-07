@@ -82,8 +82,8 @@ const FaqAccordion = () =>
             
             <AccordionSection>
                 
-                {/* <TitleFaq>Visite as nossas redes</TitleFaq> */}
-                {/* <AccordionContainer>
+                <TitleFaq>F.A.Q.</TitleFaq>
+                <AccordionContainer>
                 </AccordionContainer>  
                 { QuestionsBr.map( (item,index) =>
                 {
@@ -104,7 +104,7 @@ const FaqAccordion = () =>
                                 
                     );
                     })}
-                         */}
+                        
         </AccordionSection>
         </IconContext.Provider> ); 
     };

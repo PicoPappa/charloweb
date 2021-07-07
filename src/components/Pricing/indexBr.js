@@ -11,8 +11,6 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import ModalButton from "../Button/Button"
 import ModalButtonBr from "../Button/ButtonBr"
 import { ContactFormFunction } from "./PriceCarouselBr"
-import ModalButtonBrWhite from "../Button/ButtonBrWhite"
-import ModalButtonBrWhiteTwo from "../Button/ButtonBr"
 
 
 
@@ -116,15 +114,14 @@ gsap.registerPlugin(ScrollTrigger);
             {/* <GradientOffer>OFERTA</GradientOffer> */}
 
                         <h3>Experimente</h3>
-            <h2>uma aula individual</h2>
+            <h2>uma aula privada</h2>
             
             <DescriptionWhite> Escolher um curso que você goste e encontrar o melhor programa para você é uma tarefa importante. Recomendamos primeiro testar uma aula de graça pela <b>metade do preço</b>.
             
               <br /><br />O curso é <b>individual</b>, você terá um professor dedicado só para você.
 <br/><br/>Esta aula está disponível apenas para residentes na <b>Argentina</b> e no <b>Brasil</b>.
              </DescriptionWhite> 
-            {/* <h6>RECURSOS DE AULA</h6> */ }
-            <ModalButtonBrWhiteTwo></ModalButtonBrWhiteTwo>
+            {/* <h6>RECURSOS DE AULA</h6> */}
 
           </PricingContainer>
           
@@ -134,7 +131,9 @@ gsap.registerPlugin(ScrollTrigger);
                             <ModalButtonBr>Try 1-on-1 class free</ModalButtonBr>
                          </ButtonHolderCenter> */}
                     
-                    
+        
+        <ContactFormFunction className="plans"/>
+            
         </SectionPricingGod>
       </PricingSuperGod>
       </a>

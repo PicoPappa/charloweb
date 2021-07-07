@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import styled from "styled-components"
-import { Button,ButtonMobile, InstagramIcon } from "./ButtonElements";
+import { Button,ButtonMobile } from "./ButtonElements";
 import { Modal,Background } from "../ModalComponent/Modal"
 
 function ModalButtonMobile ()
@@ -13,8 +13,7 @@ const openModal = () =>
 };
 
   return (
-    <>
-      <InstagramIcon></InstagramIcon>
+    <> 
     < ButtonMobile onClick = { openModal } >EXPERIMENTE UMA AULA</ButtonMobile>
     
     < Modal showModal={ showModal } setShowModal={ setShowModal } />

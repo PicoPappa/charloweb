@@ -8,15 +8,14 @@ const AccordionSection = styled.div`
 display:flex;
 flex-direction:column;
 position:relative;
-width: 80%;
+width: 100%;
 max-width: 1000px;
 justify-content: center;
 align-items: left;
 margin: auto;
-margin-bottom: 16px;
-padding-top:10px;
-padding-bottom:70px;
-border-radius: 50px;
+padding-top:140px;
+padding-bottom:140px;
+
   @media screen and (max-width: 1050px) {
     width:90%;
 }
@@ -62,8 +61,6 @@ font-weight:500;
 `
 
 const TitleFaq = styled.h2`
-font-size: 16px;
-font-weight: 600;
 padding-bottom:26px;
 `
 
@@ -85,8 +82,8 @@ const FaqAccordion = () =>
             
             <AccordionSection>
                 
-                {/* <TitleFaq>Visite nosso Instagram e aprenda coisas novas todos os dias!</TitleFaq> */}
-                {/* <AccordionContainer>
+                <TitleFaq>F.A.Q.</TitleFaq>
+                <AccordionContainer>
                 </AccordionContainer>  
                 { Questions.map( (item,index) =>
                 {
@@ -106,7 +103,7 @@ const FaqAccordion = () =>
                         </>
                                 
                     );
-                    })} */}
+                    })}
                         
         </AccordionSection>
         </IconContext.Provider> ); 

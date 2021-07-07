@@ -1,7 +1,4 @@
 import styled from "styled-components"
-import { AiOutlineInstagram } from "react-icons/ai"
-import {IoIosArrowForward} from "react-icons/io"
-
 
 export const Button = styled.a`
     transition: 0.8s all ease;
@@ -28,87 +25,29 @@ export const Button = styled.a`
 }
 `
 
-export const InstagramIcon = styled( AiOutlineInstagram )`
-font-size: 24px;
-font-weight: 500px;
-color:white;
-`
-export const ArrowButton = styled( IoIosArrowForward )`
-font-size: 14px;
-  color:#676f86;
-
-`
-
-export const TextButton = styled.h3`
-font-size: 14px;
-font-weight: 700;
-  color:#676f86;
-`
-
-export const ButtonIconGrid = styled.div`
-display:flex;
-flex-direction: column;
-`
-
 export const ButtonWhite = styled.a`
-background: white;
     transition: 0.8s all ease;
-  padding: 5px 10px;
+  padding: 15px 60px;
   border-radius: 60px;
   outline: none;
   border: none;
   cursor: pointer;
   white-space: nowrap;
-display:flex;
-max-width:200px;
-column-gap: 8px;
+
   border:2px solid rgba(255, 255, 255, 1);
   color: white;
   font-weight: 700;
-  justify-content:left;
+  justify-content:center;
   align-items:center;
   
   &:hover{
         /* background: linear-gradient(90deg, rgba(123,67,255,1)  0%, rgba(223,79,180,1) 100%); */
-        box-shadow: 0px 7px 4px rgba(0,0,0,0.1);
+        box-shadow: 0px 7px 4px rgba(0,0,0,0.3);
         transform: translatey(-10%);
         transition:all 0.4s ease;
     }
   @media screen and (max-width:690px){
   display:none;
-}
-`
-
-export const ButtonTwo = styled.a`
-background: white;
-    transition: 0.8s all ease;
-  padding: 5px 10px;
-  border-radius: 60px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
-display:flex;
-margin-left:auto;
-margin-top: 16px;
-max-width:200px;
-column-gap: 8px;
-  border:2px solid rgba(255, 255, 255, 1);
-  color: white;
-  font-weight: 700;
-  justify-content:left;
-  align-items:center;
-  
-  &:hover{
-        /* background: linear-gradient(90deg, rgba(123,67,255,1)  0%, rgba(223,79,180,1) 100%); */
-        box-shadow: 0px 7px 4px rgba(0,0,0,0.1);
-        transform: translatey(-10%);
-        transition:all 0.4s ease;
-    }
-  @media screen and (max-width:690px){
-  margin:auto;
-  margin-top: 32px;
-  margin-bottom: 32px;
 }
 `
 

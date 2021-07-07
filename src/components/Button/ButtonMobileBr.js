@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import styled from "styled-components"
-import { Button,ButtonMobile, InstagramIcon } from "./ButtonElements";
+import { Button,ButtonMobile } from "./ButtonElements";
 import { Modal,Background } from "../ModalComponent/Modal"
 import { ModalBr } from "../ModalComponent/ModalBr";
 
@@ -14,8 +14,7 @@ const openModal = () =>
 };
 
   return (
-    <>
-      <InstagramIcon></InstagramIcon>
+    <> 
     < ButtonMobile href="#pricing" >EXPERIMENTE UMA AULA</ButtonMobile>
     
     < ModalBr showModal={ showModal } setShowModal={ setShowModal } />
