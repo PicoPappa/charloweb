@@ -124,6 +124,8 @@ gsap.registerPlugin(ScrollTrigger);
 <br/><br/>Esta aula está disponível apenas para residentes na <b>Argentina</b> e no <b>Brasil</b>.
              </DescriptionWhite> 
             {/* <h6>RECURSOS DE AULA</h6> */ }
+            <ModalButtonBrWhiteTwo></ModalButtonBrWhiteTwo>
+
           </PricingContainer>
           
            

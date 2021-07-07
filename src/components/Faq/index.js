@@ -3,28 +3,23 @@ import { Questions } from "./Questions";
 import styled from "styled-components"
 import { IconContext } from "react-icons"
 import { FiPlus, FiMinus } from "react-icons/fi"
-import { ButtonTwo } from "../Button/ButtonElements";
-import ModalButtonBrWhiteTwo from "../Button/ButtonBr";
 
 const AccordionSection = styled.div`
 display:flex;
 flex-direction:column;
 position:relative;
-width: 100%;
-max-width: 700px;
+width: 80%;
+max-width: 1000px;
 justify-content: center;
 align-items: left;
 margin: auto;
 margin-bottom: 16px;
-padding-bottom:50px;
-z-index: 1;
- @media screen and (max-width: 1390px) {
-padding-bottom:20px;
-}
+padding-top:10px;
+padding-bottom:70px;
+border-radius: 50px;
   @media screen and (max-width: 1050px) {
-    width:100%;
+    width:90%;
 }
-
 
 
 `
@@ -72,12 +67,24 @@ font-weight: 600;
 padding-bottom:26px;
 `
 
-export default function FaqAccordion()
+const FaqAccordion = () =>
 {
-    return(
-           
+    const [ clicked, setClicked ] = useState( false )
+    const toggle = index =>
+    {
+        if ( clicked === index )
+        {
+            //if clicked question is active, close it
+            return setClicked(null)
+        }
+
+        setClicked(index)
+    }
+    return (
+        <IconContext.Provider value={ { color: "#adaecd", size: "25px" } }>
+            
             <AccordionSection>
-            <ModalButtonBrWhiteTwo></ModalButtonBrWhiteTwo>
+                
                 {/* <TitleFaq>Visite nosso Instagram e aprenda coisas novas todos os dias!</TitleFaq> */}
                 {/* <AccordionContainer>
                 </AccordionContainer>  
@@ -102,5 +109,7 @@ export default function FaqAccordion()
                     })} */}
                         
         </AccordionSection>
-    )
+        </IconContext.Provider> ); 
     };
+
+export default FaqAccordion;

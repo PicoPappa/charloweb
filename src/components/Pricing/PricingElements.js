@@ -24,6 +24,7 @@ width:100%;
 export const PricingSuperGod = styled.div`
 width:100%;
   padding-top:50px;
+  padding-bottom:50px;
   z-index:5;
     background: linear-gradient(180deg,rgb(78, 143, 241) 0%,rgb(53, 98, 165) 100%);
     	transform: skewY(-8deg);
