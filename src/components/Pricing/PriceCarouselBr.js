@@ -511,7 +511,7 @@ const handleNameChange = ( event ) =>
 
   const handleWhatsappChange = ( event ) =>
   {
-   setMensaje("Oi! Meu nome é "+nombre+". Eu moro em "+pais+" e tenho interesse em fazer aulas de espanhol para "+interes.toLowerCase()+" de espanhol.")
+   setMensaje("Oi! Meu nome é "+nombre+". Eu moro em "+pais+" e tenho interesse em fazer aulas de espanhol para "+interes.toLowerCase()+".")
   }
 
   const handleVanishChange = ( event ) =>
